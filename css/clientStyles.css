@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.selectedHeader {
+    color: white;
+}
+body {
+    background: yellow;
+}
+header {
+    background: red;
+}
+
+table {
+   text-align: center;
+   margin: 0 auto;
+   /*border: solid 1px black;*/
+   height: 600px;
+   width: 400px;
+}
+
+ul li {
+   display: inline-block;
+   margin: 5px 3px; 
+}
+
+input[type="text"]{
+    display: block;
+    width: 50%;
+    background-color: green;
+    color: white;
+}
+.clientMain {
+    border: 1px solid black;
+    padding: 30px 30px;
+    margin: 20px;
+    box-shadow: 1px;
+}
+#logolink {
+    background-color: orange;
+    width: 80%;
+    float: left;
+    height: 50px;
+}
+#userlink {
+    background-color: blue;
+    width: 20%;
+    float: right;
+    text-align: right;
+    height: 50px;
+}
+#userlink p, #userlink a {
+    margin: 0;
+}
+
+footer {
+    margin: 20px 0;
+    text-align: center;
+}
