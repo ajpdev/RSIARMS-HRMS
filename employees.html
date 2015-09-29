@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Recruitment Page</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/employeesStyles.css" type="text/css" charset="utf-8">
+</head>
+<body id="notificationBody">
+    <header>
+        <div id="logolink">
+            
+            <a href="employees.html" id="logo">
+                <img src="img/HRMS-Logo.png">
+            </a>
+            <p>Welcome, userName here! &nbsp;&nbsp;<a href="#">Logout</a></p>
+        </div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#">Notifications<span class="notice">5</span></a></li>
+                <li><a href="#">Recruitment</a></li>
+                <li><a href="#">Clients</a></li>
+                <li><a href="#">Assets</a></li>
+                <li><a class="selectedHeader" href="#">Employees</a></li>
+                <li><a href="#">Timesheets</a></li>
+                <li><a href="#">Client Feedback &amp; Evaluation</a></li>
+                <li><a href="#">Payroll</a></li>
+                <li><a href="#">Accounting</a></li>
+                <li><a href="#">Reports</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="wrapper">
+        <div id="employee-search">
+            <div id="body-top">
+                <h2>Employees</h2>
+                <form>
+                    <label for="employee_status">Applicant Status</label>
+                    <select id="employee_status">
+                        <option value="#">All</option>
+                        <option value="#">New Applicant</option>
+                        <option value="#">Scheduled for Examination</option>
+                        <option value="#">Considered</option>
+                        <option value="#">Rejected</option>
+                        <option value="#">Scheduled for Interview</option>
+                        <option value="#">Floating</option>
+                        <option value="#">Deployed</option>
+                        <option value="#">Passed</option>
+                    </select>
+                    <!-- http://www.paulund.co.uk/how-to-create-pretty-search-forms -->
+                    <span>
+                        <input type="text" class="search rounded" placeholder="Search...">
+                     </span>
+                </form>
+             </div>   
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Employee Number</th>
+                        <th scope="col">Employee Name</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Birth Date</th>
+                        <th scope="col">Employment Date</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <!-- <tfoot>
+                    <tr>
+                        <td colspan="3">Data is updated every 15 minutes.</td>
+                    </tr>
+                </tfoot> -->
+                <tbody>
+                    <tr>
+                        <th scope="row"><a href="#">EMP-00003</a></th>
+                        <td>Robert Lopez</td>
+                        <td>Male</td>
+                        <td>January 01, 1900</td>
+                        <td>January 01, 1900</td>
+                        <td>Security Guard</td>
+                        <td>Floating</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="#">EMP-00002</a></th>
+                        <td>Jonathan Larson</td>
+                        <td>Male</td>
+                        <td>January 01, 1900</td>
+                        <td>January 01, 1900</td>
+                        <td>Security Guard</td>
+                        <td>Floating</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="#">EMP-00001</a></th>
+                        <td>Manuel Miranda</td>
+                        <td>Male</td>
+                        <td>January 01, 1900</td>
+                        <td>January 01, 1900</td>
+                        <td>Security Guard</td>
+                        <td>Deployed</td>
+                    </tr>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div id="new-applicant">
+            <form id="new-applicant-form">
+                <h2><span>Add New Applicant</span>&nbsp;&nbsp;&nbsp;<span>APP-0001(applicant no.): Robert Lopez (name)</span></h2>
+                <section id="applicant-info" class="shadow">
+                    <h2>Applicant Details</h2>
+                    
+                    <fieldset>
+                        <legend>Application Info</legend>
+                        <label for="date-applied">Date Applied</label>
+                        <input type="text" id="date-applied" name="date-applied" value="Add_DATE-PICKER_here">
+                        <!--  Date Pickers:
+                        http://stackoverflow.com/questions/19634588/how-to-add-datepicker-when-i-click-on-text-box
+                        http://jqueryui.com/datepicker/
+                        http://webdesignandsuch.com/add-a-calendar-date-picker-to-a-form-with-jquery/
+                        -->
+                        <label for="applicant-num">Applicant No</label>
+                        <input type="text" id="" name="applicant-num" value="APP-00010">
+                        
+                        <label for="status">Status</label>
+                        <input type="text" id="status" name="status" value="New Applicant">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Personal Info</legend>
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="fname" value="Robert">
+                        
+                        <label for="midname">Middle Name</label>
+                        <input type="text" id="midname" name="midname" value="Crux">
+                        
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lname" value="Lopez">
+                        
+                        <label for="birthday">Birthday</label>
+                        <input type="text" id="birthday" name="birthday" value="Add_DATE_PICKER_here">
+    
+                        <label for="age">Age</label>
+                        <input type="text" id="age" name="age" value="42"><br>
+                                            
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address" value="563 Primo Rivera St."><br>
+                        
+                        <label>Gender</label>
+                        <input type="radio" id="male" value="male" name="gender"><label for="male">Male</label>
+                        <input type="radio" id="female" value="female" name="gender"><label for="female">Female</label>
+                        <br>
+                    </fieldset>
+                    <fieldset>                    
+                        <legend>Contact Info</legend>
+                        <label for="contact_num">Contact No</label>
+                        <input type="text" id="contact_num" name="contact_num" value="09157891234">
+                        
+                        <label for="email">Email Address</label>
+                        <input type="text" id="email" name="email" value="rclopez@yahoo.com">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Other Info</legend>
+                        <label for="sss_num">SSS No</label>
+                        <input type="text" id="sss_num" name="sss_num" value="1234567890">
+                        
+                        <label for="philhealth_num">PhilHealth No</label>
+                        <input type="text" id="philhealth_num" name="philhealth_num" value="1234567890">
+                        
+                        <label for="pagibig_num">Pag-ibig No</label>
+                        <input type="text" id="pagibig_num" name="pagibig_num" value="1234567890">
+                        
+                        <label for="tin">TIN</label>
+                        <input type="text" id="tin" name="tin" value="1234567890">
+                        
+                        <label for="sg_license_num">SG License No</label>
+                        <input type="text" id="sg_license_num" name="sg_license_num" value="1234567890">
+                        
+                        <label for="sgl_expiration">SGL Expiration</label>
+                        <input type="text" id="sgl_expiration" name="sgl_expiration" value="Add_DATE_PICKER_here">
+                   </fieldset>     
+                   <fieldset class="employment_training">
+                        <legend>Employment and Training History</legend>
+                        <div id="emp_history_div">
+                            <label for="emp_history">Employment History (Employer Name, Job, Yrs of Employment)</label>
+                            <textarea id="emp_history" name="emp_history">
+123 Security Agency, Security Guard, 2009-2013
+ABC Security Agency, Security Guard, 2000-2008
+La Paz School,Maintenance Staff, 1992-2000
+                            </textarea>
+                        </div>
+                        <div id="trainings_div">
+                            <label for="trainings">Trainings Attended (Title of Training, Data/Venue, Sponsor)</label>
+                            <textarea id="trainings">
+SG Training, Feb 22, 1999 - Makati City, ABC Security Agency
+                            </textarea>
+                        </div>
+                    </fieldset>
+                    <fieldset id="documentation">
+                        <legend>Documentation and Clearances</legend>
+                        <label>Attach Requirements (SG License, Clearances, Training Certificates, Etc.)</label>
+                        <div id="requirements_attachment">
+                            <input type="button" value="Add Files">
+                            <p>Accepts .docx, .doc, .odt, .pdf, .rft, .txt up to 1MB</p>
+                        </div>
+                    </fieldset>
+                </section>
+                <section id="applicant-eval-results" class="shadow">
+                    <h2>Evaluation Results</h2>
+                    
+                    <!-- General field  -->
+                    <label for="eval_action">Status</label>
+                    <select id="eval_action">
+                        <option>Select Action</option>
+                        <option>New Applicant</option>
+                        <option>Scheduled for Examination</option>
+                        <option>Scheduled for Interview</option>
+                        <option>Passed</option>
+                        <option>Deployed</option>
+                        <option>Rejected</option>
+                        <option>Floating</option>
+                    </select>
+                    
+                    <!-- Scheduled for Examination field  -->
+                    <label for="exam_date">Exam Date</label>
+                    <input type="text" id="exam_date" name="exam_date" value="Add_DATE_PICKER_here">
+                    
+                    <!-- Scheduled for Interview field  -->
+                    <label for="interview_date">Interview Date</label>
+                    <input type="text" id="interview_date" name="interview_date" value="Add_DATE_PICKER_here">
+
+
+                    <!-- Scheduled for Examination field  -->
+                    <label for="exam_result">Exam Result</label>
+                    <input type="text" id="exam_result" name="exam_result" value="">
+                    
+                    <!-- Scheduled for Interview field  -->
+                    <label for="interview_result">Interview Result</label>
+                    <input type="text" id="interview_result" name="interview_result" value="">
+
+                    <!-- Floating field  -->
+                    <label for="emp_date">Employment Date</label>
+                    <input type="text" id="employment_date" name="employment_date" value="Add_DATE_PICKER_here">
+
+                    <!-- Floating field  -->
+                    <label for="emp_no">Employee No</label>
+                    <input type="text" id="emp_no" name="emp_no" value="">
+
+                    <!-- Passed field  -->
+                    <label for="ranking">Ranking</label>
+                    <input type="text" id="ranking" name="ranking" value="">
+
+                    <!-- General field  -->
+                    <label for="eval_comments">Notes/Comments   </label>
+                    <textarea id="eval_comments">
+                    </textarea>
+                    
+                                                   
+                </section>
+                <div id="buttons">
+                    <input type="reset" value="CANCEL">
+                    <input type="submit" value="SAVE">
+                </div>
+            </form>
+        </div>    
+        
+        <footer>
+            <a href="https://www.facebook.com/jake.pagalilauan" target="_blank">
+                <img src="img/fb.png" alt="Facebook Logo" class="social-icon">
+            </a>
+            <a href="https://us-mg6.mail.yahoo.com" target="_blank">
+                <img src="img/ymail2.png" alt="Yahoo Mail Logo" class="social-icon">
+            </a>
+            <a href="https://mail.google.com" target="_blank">
+                <img src="img/gmail.png" alt="Gmail Logo" class="social-icon">
+            </a>
+            <p>&copy; 2015 Arbee Jacob Pagalilauan</p>
+        </footer>
+    </div>
+</body>
+</html>
