@@ -129,11 +129,12 @@ BODY NAVIGATION
     background-color: rgb(8,157,227);
 
     margin-right: -3px; /*to remove spaces between inline-block elements*/
-    border-top-left-radius: 20px;
-    border-top-right-radius: 80px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    border-top-left-radius: 8px;
+    /*border-top-right-radius: 80px;*/
+   border-top-right-radius: 8px;
+    padding-right: 2px;
+    padding-top: 2px;
+    padding-bottom: 8px;
 
 }
 
@@ -148,9 +149,9 @@ BODY NAVIGATION
  
 #content-nav .selectedTab {
     background-color: rgb(49,62,159);
-    padding-top: 10px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 80px;    
+    padding-top: 8px;
+    /*border-top-left-radius: 20px;
+    border-top-right-radius: 80px;  */  
 }
  
 

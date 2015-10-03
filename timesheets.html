@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Recruitment Page</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/timesheetsStyles.css" type="text/css" charset="utf-8">
+</head>
+<body id="notificationBody">
+    <header>
+        <div id="logolink">
+            
+            <a href="employees.html" id="logo">
+                <img src="img/HRMS-Logo.png">
+            </a>
+            <p>Welcome, userName here! &nbsp;&nbsp;<a href="#">Logout</a></p>
+        </div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#">Notifications<span class="notice">5</span></a></li>
+                <li><a href="#">Recruitment</a></li>
+                <li><a href="#">Clients</a></li>
+                <li><a href="#">Assets</a></li>
+                <li><a href="#">Employees</a></li>
+                <li><a class="selectedHeader" href="#">Timesheets</a></li>
+                <li><a href="#">Client Feedback &amp; Evaluation</a></li>
+                <li><a href="#">Payroll</a></li>
+                <li><a href="#">Accounting</a></li>
+                <li><a href="#">Reports</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="wrapper">
+              
+        <div>
+            <nav id="content-nav">
+                <ul>
+                    <li><a href="#">View Timesheets</a></li>
+                    <li class="selectedTab"><a href="#">Leave Requests</a></li>
+                </ul>
+            </nav>
+            <div class="main-content shadow">
+                <div id="view-timesheets">
+                    <label for="">Timesheet Period</label>
+                    <select>
+                        <option>Select Period</option>
+                        <option>Period 1 from DB </option>
+                    </select>
+                    <a href="#">+Add New Timesheet Period</a>
+                   
+                    
+                    <label for="">Employee Name</label>
+                    <select>
+                        <option>Select Employee</option>
+                        <option>LastName, FirstName from DB </option>
+                    </select>
+                    
+                   
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Employee</th>
+                                <th scope="col">Timesheet Period</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Manuel Miranda</td>
+                                <td><a href="#">March 16 - March 30</a></td>
+                            </tr>
+                            <tr>
+                                <td>Jonathan Larson</td>
+                                <td><a href="#">March 01 - March 15</a></td>
+                            </tr>
+                            <tr>
+                                <td>Manuel Miranda</td>
+                                <td><a href="#">March 01 - March 15</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div>
+                        <h2>Timesheet for Manuel Miranda (Name), March 16 - March 30 (Period)</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Mar 17(Mon) --- 1st Date (Day)</th>
+                                    <th scope="col">Mar 18(Tues</th>
+                                    <th scope="col">Mar 19(Wed)</th>
+                                    <th scope="col">Mar 20(Thurs)</th>
+                                    <th scope="col">Mar 21(Fri)</th>
+                                    <th scope="col">Mar 22(Sat)</th>
+                                    <th scope="col">Mar 23(Sun)</th>
+                                    <th scope="col">Mar 24(Mon)</th>
+                                    <th scope="col">Mar 25(Tues)</th>
+                                    <th scope="col">Mar 26(Wed)</th>
+                                    <th scope="col">Mar 27(Thurs)</th>
+                                    <th scope="col">Mar 28(Fri)</th>
+                                    <th scope="col">Mar 29(Sat)</th>
+                                    <th scope="col">Mar 30(Sun) --- Last Date (Day)</th>
+                                    <th scope="col">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>8.0</td>
+                                    <td>8.0</td>
+                                    <td>8.0</td>
+                                    <td>8.0</td>
+                                    <td>8.0</td>
+                                    <td>8.0</td>
+                                    <td>8.0</td>
+                                    <td>8.0</td>
+                                    <td>8.0</td>
+                                    <td>8.0</td>
+                                    <td>8.0</td>
+                                    <td>8.0</td>
+                                    <td>8.0</td>
+                                    <td>8.0</td>
+                                    <td>80.0</td>
+                                </tr>                            
+                            </tbody>
+                        </table>
+                        <a href="#">+++ Print Timesheet</a>
+                    </div>
+                </div>
+                
+                <div id="leave-requests">
+                    <a href="#">+ Add Leave Request</a>
+                    <label for="">Status</label>
+                    <select>
+                        <option>All</option>
+                        <option>Pending for Approval</option>
+                        <option>Approved</option>
+                    </select>
+                    
+                    <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Employee No</th>
+                                    <th scope="col">Employee Name</th>
+                                    <th scope="col">Date Requested</th>
+                                    <th scope="col">Leave Type</th>
+                                    <th scope="col">Reason</th>
+                                    <th scope="col">Start Date</th>
+                                    <th scope="col">End Date</th>
+                                    <th scope="col">Total Days</th>
+                                    <th scope="col">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>EMP-0001</td>
+                                    <td>Jonathan Lanon</td>
+                                    <td>04/06/2014</td>
+                                    <td>Vacation Leave</td>
+                                    <td>Vacation with Family</td>
+                                    <td>04/14/2014</td>
+                                    <td>04/18/2014</td>
+                                    <td>5</td>
+                                    <td>Pending</td>
+                                </tr>                            
+                            </tbody>
+                        </table>
+                </div>
+                <div id="leave-request-window">
+                    <h2>Leave Request</h2>
+                    
+                    <label for="">Employee No</label>
+                    <input type="text" id="" name= "" value="EMP-00001">
+                    
+                    <label for="">Employee Name</label>
+                    <input type="text" id="" name= "" value="Jonathan Larson">
+                    
+                    <label for="">Date Requested</label>
+                    <input type="text" id="" name= "" value="04/08/2014">
+                    
+                    <label for="">Leave Type</label>
+                    <input type="text" id="" name= "" value="Vacation Leave">
+                    
+                    <label for="">Reason</label>
+                    <input type="text" id="" name= "" value="Vacation with Family">
+                    
+                    <label for="">Start Date</label>
+                    <input type="text" id="" name= "" value="04/14/2014">
+                    
+                    <label for="">End Date</label>
+                    <input type="text" id="" name= "" value="04/18/2014">
+                    
+                    <label for="">Days Total</label>
+                    <input type="text" id="" name= "" value="5">
+                    
+                    <label for="">Status</label>
+                    <select>
+                        <option>New</option>
+                        <option selected="selected">Pending</option>
+                        <option>Approved</option>
+                    </select>
+                    <!-- <input type="text" id="" name= "" value="Pending"> -->
+                    
+                    <label for="">Action</label>
+                    <select>
+                        <option selected="selected">Approve</option>
+                        <option>Reject</option>
+                    </select>
+                    <!-- <input type="text" id="" name= "" value="Approve"> -->
+                    
+                    <label for="">Comments</label>
+                    <input type="text" id="" name= "" value="Approved.">
+                    
+                    <input type="button" id="" value="Cancel">
+                    <input type="button" id="" value="Update">
+                </div>
+            </div>    
+        </div>
+        
+        <footer>
+            <a href="https://www.facebook.com/jake.pagalilauan" target="_blank">
+                <img src="img/fb.png" alt="Facebook Logo" class="social-icon">
+            </a>
+            <a href="https://us-mg6.mail.yahoo.com" target="_blank">
+                <img src="img/ymail2.png" alt="Yahoo Mail Logo" class="social-icon">
+            </a>
+            <a href="https://mail.google.com" target="_blank">
+                <img src="img/gmail.png" alt="Gmail Logo" class="social-icon">
+            </a>
+            <p>&copy; 2015 Arbee Jacob Pagalilauan</p>
+        </footer>
+    </div>
+</body>
+</html>
