@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Recruitment Page</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/clientfeedbackStyles.css" type="text/css" charset="utf-8">
+</head>
+<body id="notificationBody">
+    <header>
+        <div id="logolink">
+            
+            <a href="employees.html" id="logo">
+                <img src="img/HRMS-Logo.png">
+            </a>
+            <p>Welcome, userName here! &nbsp;&nbsp;<a href="#">Logout</a></p>
+        </div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#">Notifications<span class="notice">5</span></a></li>
+                <li><a href="#">Recruitment</a></li>
+                <li><a href="#">Clients</a></li>
+                <li><a href="#">Assets</a></li>
+                <li><a href="#">Employees</a></li>
+                <li><a href="#">Timesheets</a></li>
+                <li><a class="selectedHeader" href="#">Client Feedback &amp; Evaluation</a></li>
+                <li><a href="#">Payroll</a></li>
+                <li><a href="#">Accounting</a></li>
+                <li><a href="#">Reports</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="wrapper">
+              
+        <div>
+            <nav id="content-nav">
+                <ul>
+                    <li><a href="#">Violation Reports</a></li>
+                    <li><a href="#">Client Feedback</a></li>
+                    <li class="selectedTab"><a href="#">Performance Evaluation</a></li>
+                </ul>
+            </nav>
+            <div class="main-content shadow">
+                <div id="violation-reports">
+                    <a href="#">+ Add Violation Report</a>
+                    
+                    <label for="">Employee Name</label>
+                    <select>
+                        <option>Select Employee</option>
+                        <option>Name 1 from DB</option>
+                        <option>Name 2 from DB</option>
+                    </select>
+                    
+                    <label for="">Client</label>
+                    <select>
+                        <option>Select Client</option>
+                        <option>Client 1 from DB</option>
+                        <option>Client 2 from DB</option>
+                    </select>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Date Reported</th>
+                                <th scope="col">Employee Name</th>
+                                <th scope="col">Client</th>
+                                <th scope="col">Reported By</th>
+                                <th scope="col">Violation Type</th>
+                                <th scope="col">Report Link</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>04/10/2014</td>
+                                <td>Manuel Miranda</td>
+                                <td>Bassig Grocery</td>
+                                <td>Karen Olivo - Supervisor</td>
+                                <td>Etiquette</td>
+                                <td><a href="#">View Report</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id="violation-report-window">
+                        <label for="">Date Reported</label>
+                        <input type="text" id="" name="" value="">
+                        
+                        <label for="">Employee Name</label>
+                        <input type="text" id="" name="" value="Manuel Miranda">
+                        
+                        <label for="">Client</label>
+                        <input type="text" id="" name="" value="Bassig Grocery">
+                        
+                        <label for="">Reported By</label>
+                        <input type="text" id="" name="" value="Karen Olivo - Supervisor">
+                       
+                        <label for="">Violation Type</label>
+                        <input type="text" id="" name="" value="Etiquette">
+                        
+                        <label for="">Violation Details</label>
+                        <input type="text" id="" name="" value="Caught sleeping on post during his duty">
+                        
+                        <label for="">Action</label>
+                        <select>
+                            <option>Select Action</option>
+                            <option>Action 1</option>
+                        </select>                       
+                        <label for="">Decision</label>
+                        <select>
+                            <option>Select Decision</option>
+                            <option>Decision 1</option>                            
+                        </select>
+                        
+                        <label for="">Comment</label>
+                        <textarea id=""></textarea>
+                        
+                        <input type="button" id="" value="Cancel">
+                        <input type="button" id="" value="Save">
+                    </div>
+                </div>
+                
+                <div id="client-feedback">
+                    
+                </div>
+                <div id="perf-evaluation">
+                    <a href="#">+ Add Performance Evaluation</a>
+                    
+                    <label for="">Employee Name</label>
+                    <select>
+                        <option>Select Employee</option>
+                        <option>Name 1 from DB</option>
+                        <option>Name 2 from DB</option>
+                    </select>
+                    
+                    <label for="">Client</label>
+                    <select>
+                        <option>Select Client</option>
+                        <option>Client 1 from DB</option>
+                        <option>Client 2 from DB</option>
+                    </select>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Evaluation Date</th>
+                                <th scope="col">Employee Name</th>
+                                <th scope="col">Client</th>
+                                <th scope="col">Evaluated By</th>
+                                <th scope="col">Evaluation Result</th>
+                                <th scope="col">Report Link</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>04/10/2014</td>
+                                <td>Robert Lopez</td>
+                                <td>Fico Bank</td>
+                                <td>Cristin Millioti - Supervisor</td>
+                                <td>Good Performance</td>
+                                <td><a href="#">View Report</a></td>
+                            </tr>
+                            <tr>
+                                <td>04/10/2014</td>
+                                <td>Manuel Miranda</td>
+                                <td>Bassig Grocery</td>
+                                <td>Karen Olivo - Supervisor</td>
+                                <td>Poor Performance</td>
+                                <td><a href="#">View Report</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id="perf-evaluation-window">
+                        <label for="">Evaluation Date</label>
+                        <input type="text" id="" name="" value="">
+                        
+                        <label for="">Employee Name</label>
+                        <input type="text" id="" name="" value="Manuel Miranda">
+                        
+                        <label for="">Client</label>
+                        <input type="text" id="" name="" value="Bassig Grocery">
+                        
+                        <label for="">Evaluated By</label>
+                        <input type="text" id="" name="" value="Karen Olivo - Supervisor">
+                       
+                        <label for="">Evaluation Result</label>
+                        <input type="text" id="" name="" value="Etiquette">
+                        
+                        <label for="">Evaluation Details</label>
+                        <input type="text" id="" name="" value="Caught sleeping on post during his duty">
+                        
+                        <label for="">Action</label>
+                        <select>
+                            <option>Select Action</option>
+                            <option>Action 1</option>
+                        </select>                       
+                        <label for="">Decision</label>
+                        <select>
+                            <option>Select Decision</option>
+                            <option>Decision 1</option>                            
+                        </select>
+                        
+                        <label for="">Comment</label>
+                        <textarea id=""></textarea>
+                        
+                        <input type="button" id="" value="Cancel">
+                        <input type="button" id="" value="Save">
+                    </div>
+                </div>
+            </div>    
+        </div>
+        
+        <footer>
+            <a href="https://www.facebook.com/jake.pagalilauan" target="_blank">
+                <img src="img/fb.png" alt="Facebook Logo" class="social-icon">
+            </a>
+            <a href="https://us-mg6.mail.yahoo.com" target="_blank">
+                <img src="img/ymail2.png" alt="Yahoo Mail Logo" class="social-icon">
+            </a>
+            <a href="https://mail.google.com" target="_blank">
+                <img src="img/gmail.png" alt="Gmail Logo" class="social-icon">
+            </a>
+            <p>&copy; 2015 Arbee Jacob Pagalilauan</p>
+        </footer>
+    </div>
+</body>
+</html>

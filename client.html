@@ -2,83 +2,294 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Home Page</title>
+<title>Client Page</title>
+<link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/clientStyles.css" type="text/css" charset="utf-8">
 </head>
 <body id="notificationBody">
     <header>
-        <div id="userlink">
-            <a href="#">Logout</a>
-            <p>user's login name here!</p>
-        </div>
         <div id="logolink">
-            <p><a href="#">Image/Main Logo will be displayed here</a></p>
+            
+            <a href="notifications.html" id="logo">
+                <img src="img/HRMS-Logo.png">
+            </a>
+            <p>Welcome, userName here! &nbsp;&nbsp;<a href="#">Logout</a></p>
         </div>
-        <nav>
+        <nav id="main-nav">
             <ul>
-                <li><a class="selectedHeader" href="#">Home</a></li>
-                <li><a href="#">Clients</a></li>
-                <li><a href="#">Inventory</a></li>
-                <li><a href="#">Personnel</a></li>
+                <li><a href="#">Notifications<span class="notice">5</span></a></li>
+                <li><a href="#">Recruitment</a></li>
+                <li><a class="selectedHeader" href="#">Clients</a></li>
+                <li><a href="#">Assets</a></li>
+                <li><a href="#">Employees</a></li>
+                <li><a href="#">Timesheets</a></li>
+                <li><a href="#">Client Feedback &amp; Evaluation</a></li>
                 <li><a href="#">Payroll</a></li>
                 <li><a href="#">Accounting</a></li>
+                <li><a href="#">Reports</a></li>
             </ul>
         </nav>
     </header>
     <div id="wrapper">
-        <h2>Clients</h2>
-        <nav>
-            <ul>
-                <li><a href="#">Client Information</a></li>
-                <li><a href="#">DTR Details</a></li>
-                <li><a href="#">Salary and Benefits</a></li>
-                <li><a href="#">Assigned Employees</a></li>
-            </ul>
-        </nav>
-        <div id="clientInfo" class="clientMain">
-            <label for="clientID">Client ID:</label>
-            <input type="text" id="clientID" name="client_id" value="Sample Client ID">
-            
-            <label for="clientName">Client Name:</label>
-            <input type="text" id="clientName" name="client_name" value="Sample Client Name">
-            
-            <label for="clientAddress">Client Address:</label>
-            <input type="text" id="clientAddress" name="client_address" value="Sample Client Address">
-            
-            <label for="supervisor">Assigned Supervisor:</label>
-            <input type="text" id="supervisor" name="supervisor" value="Sample Assigned Supervisor Name">
-            
-            <label for="clientStatus">Client Status:</label>
-            <input type="text" id="clientStatus" name="status" value="Sample Client Status">
-            
-            <input type="button" id="delete" value="Delete">
-            <input type="button" id="edit" value="Edit">
-        </div>
-        <div id="dtrDetails" class="clientMain">
-            <table border="1px">
+        <div id="applicant-search">
+            <div id="body-top">
+                <h2>Clients</h2>
+                <form>
+                    <label for="applicant-status">Applicant Status</label>
+                    <select id="applicant-status">
+                        <option value="#">All</option>
+                        <option value="#">Active</option>
+                        <option value="#">Inactive</option>
+                    </select>
+                    <!-- http://www.paulund.co.uk/how-to-create-pretty-search-forms -->
+                    <span>
+                        <input type="text" class="search rounded" placeholder="Search...">
+                     </span>
+                     <span><a href="#">Add New Client</a></span>
+                </form>
+             </div>   
+            <table>
                 <thead>
                     <tr>
-                        <td>Day</td>
-                        <td>Operation Hours</td>
-                        <td>Shifts</td>
-                        <td>Edit/Delete</td>
+                        <th scope="col">Client ID</th>
+                        <th scope="col">Client Name</th>
+                        <th scope="col">Client Address</th>
+                        <th scope="col">Assigned Supervisor</th>
+                        <th scope="col">Status</th>
                     </tr>
                 </thead>
+                <!-- <tfoot>
+                    <tr>
+                        <td colspan="3">Data is updated every 15 minutes.</td>
+                    </tr>
+                </tfoot> -->
                 <tbody>
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <th scope="row"><a href="#">CLI-00001</a></th>
+                        <td>AMA Tug</td>
+                        <td>Kalinga</td>
+                        <td>Christine Taburada</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CLI-00002</th>
+                        <td>Bassig Grocery</td>
+                        <td>Ilocos Norte</td>
+                        <td>Miguel Isidro</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CLI-00003</th>
+                        <td>Fico Bank</td>
+                        <td>Solana, Cagayan</td>
+                        <td>Anthony Rivera</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <div id="salary_benefits">
-            
+        
+        <div id="client-details">
+            <nav id="content-nav">
+                <ul>
+                    <li><a href="#">Client Information</a></li>
+                    <li><a href="#">DTR Details</a></li>
+                    <li class="selectedTab"><a href="#">Salary and Benefits</a></li>
+                    <li><a href="#">Assigned Employees</a></li>
+                </ul>
+            </nav>
+            <div class="main-content shadow">
+                <div id="client-information">
+                    <form>
+                        <label for="client-id">Client ID</label>
+                        <input type="text" id="client-id" name="client-id" value="CLI-0003">
+                        
+                        <label for="client-name">Client Name</label>
+                        <input type="text" id="client-name" name="client-name" value="FICO Bank">
+                    
+                        <label for="client-addr">Client Address</label>
+                        <input type="text" id="client-addre" name="client-addr" value="Solana, Cagayan">
+                        
+                        <label for="assigned-sup">Assigned Supervisor</label>
+                        <input type="text" id="assigned-sup" name="assigned-sup" value="Anthony Rivera">
+                        
+                        <label for="client-status">Client Status</label>
+                        <input type="text" id="client-status" name="client-status" value="Active">
+                        
+                        <input type="button" id="delete-btn" value="Delete">
+                        <input type="button" id="edit-btn" value="Edit">
+                    </form>
+                </div>
+                <div id="dtr-details">
+                    <a href="#">+ Add Data</a>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Day</th>
+                                <th scope="col">Operation Hours</th>
+                                <th scope="col">Shift</th>
+                                <th scope="col">Edit/Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" rowspan="3"><a href="#">Monday</a></th>
+                                <td rowspan="3">24 hours</td>
+                                <td>1st Shift: 05:00 - 13:00</td>
+                                <td rowspan="3"><a href="#">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>2nd Shift: 13:00 - 20:00 </td>
+                            </tr>
+                            <tr>
+                                <td>3rd Shift: 20:00 - 05:00 </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="3"><a href="#">Tuesday</a></th>
+                                <td rowspan="3">24 hours</td>
+                                <td>1st Shift: 05:00 - 13:00</td>
+                                <td rowspan="3"><a href="#">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>2nd Shift: 13:00 - 20:00 </td>
+                            </tr>
+                            <tr>
+                                <td>3rd Shift: 20:00 - 05:00 </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="3"><a href="#">Wednesday</a></th>
+                                <td rowspan="3">24 hours</td>
+                                <td>1st Shift: 05:00 - 13:00</td>
+                                <td rowspan="3"><a href="#">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>2nd Shift: 13:00 - 20:00 </td>
+                            </tr>
+                            <tr>
+                                <td>3rd Shift: 20:00 - 05:00 </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="3"><a href="#">Thursday</a></th>
+                                <td rowspan="3">24 hours</td>
+                                <td>1st Shift: 05:00 - 13:00</td>
+                                <td rowspan="3"><a href="#">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>2nd Shift: 13:00 - 20:00 </td>
+                            </tr>
+                            <tr>
+                                <td>3rd Shift: 20:00 - 05:00 </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="3"><a href="#">Friday</a></th>
+                                <td rowspan="3">24 hours</td>
+                                <td>1st Shift: 05:00 - 13:00</td>
+                                <td rowspan="3"><a href="#">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>2nd Shift: 13:00 - 20:00 </td>
+                            </tr>
+                            <tr>
+                                <td>3rd Shift: 20:00 - 05:00 </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="3"><a href="#">Saturday</a></th>
+                                <td rowspan="3">24 hours</td>
+                                <td>1st Shift: 05:00 - 13:00</td>
+                                <td rowspan="3"><a href="#">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>2nd Shift: 13:00 - 20:00 </td>
+                            </tr>
+                            <tr>
+                                <td>3rd Shift: 20:00 - 05:00 </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="3"><a href="#">Sunday</a></th>
+                                <td rowspan="3">24 hours</td>
+                                <td>1st Shift: 05:00 - 13:00</td>
+                                <td rowspan="3"><a href="#">Edit</a>&nbsp;&nbsp;&nbsp;<a href="#">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>2nd Shift: 13:00 - 20:00 </td>
+                            </tr>
+                            <tr>
+                                <td>3rd Shift: 20:00 - 05:00 </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                <div id="salary-benefits">
+                     <form>
+                         <label for="pay-type">Pay Type</label>
+                         <!-- <input type="text" id="pay-type" name="pay-type" value="Hourly Rate"> -->
+                         <select>
+                             <option>Hourly Rate</option>
+                             <option>Daily Rate</option>
+                         </select>
+                         
+                         <label for="rate">Rate</label>
+                         <input type="text" id="rate" name="rate" value="100.00 / Hour">
+                         <span> / Hour</span>
+                         
+                         <label for="allowance">Allowance</label>
+                         <input type="text" id="allowance" name="allowance" value="0.00">
+                         
+                         <input type="button" id="update-btn" value="Update">
+                         <input type="button" id="cancel-btn" value="Cancel">
+                         <input type="button" id="save-btn" value="Save">
+                     </form>
+                         
+                </div>
+                <div id="assigned-employees">
+                    <a href="#">+ Add Reliever</a>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Employee No</th>
+                                <th scope="col">Employee Name</th>
+                                <th scope="col">Deployment Start Date</th>
+                                <th scope="col">Deployment End Date</th>
+                                <th scope="col">Schedule</th>
+                                <th scope="col">Is Reliever? (Y/N)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>EMP-00003</td>
+                                <td>Robert Lopez</td>
+                                <td>04/16/2014</td>
+                                <td>04/30/2014</td>
+                                <td>Day Shift: 05:00 - 13:00</td>
+                                <td>N</td>
+                            </tr>
+                            <tr>
+                                <td>EMP-00010</td>
+                                <td>John Doe (o.b.o. Robert Lopez)</td>
+                                <td>04/23/2014</td>
+                                <td>04/23/2014</td>
+                                <td>Day Shift: 05:00 - 13:00</td>
+                                <td>Y</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>    
         </div>
-        <div id="assignedEmp">
-            
-        </div>
+        
         <footer>
             <a href="https://www.facebook.com/jake.pagalilauan" target="_blank">
                 <img src="img/fb.png" alt="Facebook Logo" class="social-icon">
