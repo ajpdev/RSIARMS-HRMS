@@ -1,67 +1,74 @@
 /***************************
-GENERAL
+GENERIC CLASSES
+body, a, p, h1, etc.
 ***************************/
 
-body{
+body {
     font-family: 'Open San', sans-serif;
-    /*background-color: yellow;*/
     background-color: #fff;
-    /*color: #999 /*change text color of body*/*/
 }
 
-/*
-	this is the content design
-*/
-#wrapper {
-    max-width: 940px; /* text will be centered if 940px is exceeded    */
-    margin: 0 auto;
-    padding: 0 5%;
-    /*background: yellow;*/ 
+header {
+    margin: 0 auto 30px;
+    padding: 5px 0 0 0;
+    width: 90%; /*to stretch it out the whole page*/
 }
 
-/***************************
-NAVIGATION
-***************************/
 nav {
     text-align: center;
-   /* margin: 20px 0 0;*/ /*
-       adds an extension of yellow above
-   */
-    background-color: rgb(49,62,159);
+    background-color: rgb(49,62,159); /*can be classed*/
+  
 }
 
-nav ul {
-    list-style: none;
-    margin: 0 10px;
-    padding: 0;
+h1, h2, h3 {
+    font-weight: normal;
 }
 
-nav li {
-    display: inline-block;
-    padding: 10px 0;
+
+table {
+    width: 90%;
+    margin: 20px auto 40px;
+    font-size: 0.75em;
 }
 
-nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 800;
-    padding: 15px 10px; /* links will be more clickable bec of padding */
+footer {
+    font-size: 0.75em;
+    text-align: center;
+    padding-top: 50px;
+    color: #000;
 }
 
-/*
-nav a, nav a:visited {
-    color: yellow;
-}*/
-
-/* selected nav link */
-nav a.selectedHeader, nav a:hover {
-    color: yellow;
-    
+/*****************************
+POSITIONING AND DESIGN CLASSES
+******************************/
+.center {margin: 0 auto}
+.left {float:left}
+.right {float:right}
+.lowcase {text-transform: lowercase}
+.upcase {text-transform: uppercase}
+.capitalizecase {text-transform: capitalize}
+.shadow {
+    /*used http://www.cssmatic.com/box-shadow to generate shadow effect*/
+    -webkit-box-shadow: 0px 12px 25px 0px rgba(0,0,0,0.38); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 0px 12px 25px 0px rgba(0,0,0,0.38); /* Firefox 3.5 - 3.6 */
+    box-shadow: 0px 12px 25px 0px rgba(0,0,0,0.38); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+.notice {
+    color: black;
+    background-color: yellow;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-left: 10px;
 }
 
-/***************************
-HEADING
-***************************/
+.hidden {
+    display: none;
+}
+
+
+/*******************************
+HEADING (above main navigation)
+********************************/
 header img {
     /*width: 400px;*/
     margin-bottom: -10px;
@@ -70,47 +77,90 @@ header img {
     /*background-color: yellow;*/
 }
 
-header {
-    /*float: left;*/
-    margin: 0 auto 30px;
-    padding: 5px 0 0 0;
-    width: 90%; /*to stretch it out the whole page*/
-}
 
-#logo {
+.logo {
     /*background-color: orange; - will not work since its a link*/ 
     width: 100%;
     text-align: center;
     margin: 0;
 }
 
-#logolink  p {
+.logolink  p {
     /*background-color: red;*/
     width: 100%;
     text-align: right;
     font-size: 0.75em;
-    /*margin: -5px 0 0;*/
     font-weight: normal;
     margin-right: 20px;
+    margin-bottom: 5px;
 }
 
-h1 {
-    font-family: 'Changa One', sans-serif;
-    margin: 15px 0;
-    font-size: 1.75em;
-    font-weight: normal;
-    line-height: 0.8em;
+/***************************
+MISC
+***************************/
+
+/* navigation list items for main nav, sub nav*/
+/*.navigation li {
+    display: inline-block;
+    padding: 10px 0;
+}*/
+/***************************
+TOP MAIN NAVIGATION
+***************************/
+
+nav li, div li {
+    display: inline-block;
+    padding: 10px 0;
+    margin-bottom: 5px;
+    border: 1px solid red;
+    vertical-align: middle;
+    font-weight: bold;
+}
+nav li {
+    font-size: 14px;
+    /*if 1165px, change layout can be done by jQuery*/
+}
+nav li:nth-child(7){
+    width: 135px;
+    line-height: 15px;
+    text-align: center;
+    padding-right: 4px;
 }
 
-h2 {
-    font-size: 0.75em;
-    margin: -5px 0 0;
-    font-weight: normal;
+/*nav li {
+    border: 1px solid red;
+    width: 60px;
+    font-size: 9px;
+    text-align: right;
+    padding-left: 30px;
+    vertical-align: middle;
+}*/
+nav ul {
+    list-style: none;
+    margin: 0 10px;
+    padding: 0;
+    /*width: 1110px;*/
+   
 }
+
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 10px; /* links will be more clickable bec of padding */
+}
+
+
+/* selected nav link */
+, nav a:hover {
+    color: yellow; /*can be classed*/
+    
+}
+
 
 
 /***************************
-BODY NAVIGATION
+SUB NAVIGATION
 ***************************/
 
 #content-nav {
@@ -126,7 +176,7 @@ BODY NAVIGATION
 
 #content-nav li {
     /*border: solid 1px black;*/
-    background-color: rgb(8,157,227);
+    background-color: rgb(8,157,227); 
 
     margin-right: -3px; /*to remove spaces between inline-block elements*/
     border-top-left-radius: 8px;
@@ -148,7 +198,7 @@ BODY NAVIGATION
 }
  
 #content-nav .selectedTab {
-    background-color: rgb(49,62,159);
+    background-color: rgb(49,62,159); /* can be classeds */
     padding-top: 8px;
     /*border-top-left-radius: 20px;
     border-top-right-radius: 80px;  */  
@@ -156,82 +206,71 @@ BODY NAVIGATION
  
 
 #content-nav a:hover, #content-nav .selectedTab a {
-    color: yellow;
+    color: yellow; /* can be classed */
     
 }
 
-.notice {
-    color: black;
-    background-color: yellow;
-    border: 1px solid white;
-    border-radius: 50%;
-    margin-left: 10px;
-}
+
 
 /***************************
- BODY CONTENT
+MAIN CONTENT
 ***************************/
+
+#wrapper {
+    max-width: 1100px; /* text will be centered if 940px is exceeded    */
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
 .main-content {
     /*border: solid 1px black;*/
-    border-top: solid 8px rgb(49,62,159);
+    border-top: solid 8px rgb(49,62,159); /*can be classed*/
     border-top-right-radius: 10px; 
     overflow-y: auto;
     overflow-x: auto; /*put this on media queries for small sized devices*/
     max-height: 400px;
 }
 
-.shadow {
-    /*used http://www.cssmatic.com/box-shadow to generate shadow effect*/
-    -webkit-box-shadow: 0px 12px 25px 0px rgba(0,0,0,0.38); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-    -moz-box-shadow: 0px 12px 25px 0px rgba(0,0,0,0.38); /* Firefox 3.5 - 3.6 */
-    box-shadow: 0px 12px 25px 0px rgba(0,0,0,0.38); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+h1 {
+    margin: 15px 0; /* should be moved to specifics */
+    font-size: 1.75em;
 }
-/*
 
-#violation-reports {
-    background-color: yellow;
-    height: 200px;
-    border: solid 1px black;
-    width: 90%;
-    margin: 20px auto 40px;
-}*/
-
-/*.hidden-div {
-    display: none;
-}*/
+h2 {
+    font-size: 0.75em;
+    margin: -5px 0 0; /* should be moved to specifics */
+}
 
 /***************************
- BODY TABLES
+FORM ELEMENTS
 ***************************/
-table {
-  /*max-width: 900px;*/
- width: 90%;
-  margin: 20px auto 40px;
-  /*margin: 10px auto;*/
-  font-size: 0.75em;
-}
+
+
+
+/***************************
+CONTENT TABLES (OK NA TO)
+***************************/
 
 thead th {
-  font-weight: 400;
-  background: rgb(240,240,240);
-  /*color: #FFF;*/
- color: black;
- font-weight: 700;
+    font-weight: 400;
+    background: rgb(240,240,240);
+    color: black;
+    font-weight: 700;
 }
 
 tr {
-  background: white;
-  margin-bottom: 5px;
+    background: white;
+    margin-bottom: 5px;
 }
 
 tr:nth-child(even) {
-  background: rgb(247,247,247);
+    background: rgb(247,247,247);
 }
 
 th, td {
-  text-align: left;
-  padding: 10px;
-  font-weight: 300;
+    text-align: left;
+    padding: 10px;
+    font-weight: 300;
     border: 1px solid #ccc; /*added this for border*/
 }
 
@@ -240,9 +279,3 @@ th, td {
 /***************************
 FOOTER
 ***************************/
-footer {
-    font-size: 0.75em;
-    text-align: center;
-    padding-top: 50px;
-    color: #000;
-}
