@@ -2,46 +2,54 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Home Page</title>
+<title>Notification Page</title>
 <link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/notificationStyles.css" type="text/css" charset="utf-8">
-<!-- <link rel="stylesheet" href="css/responsive.css"> -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/notifications-main.css">
+<link rel="stylesheet" href="css/notifications-responsive.css">
 </head>
-<body id="notificationBody">
+<body>
     <header>
         <div class="logolink">
             
-            <a href="notifications.html" class="logo">
-                <img src="img/HRMS-Logo.png">
+            <a class="desktop-header" href="notifications.html">
+                <img src="img/HRMS-Logo.png" alt="rsia-rms main logo">
             </a>
-            <p>Welcome, userName here! &nbsp;&nbsp;<a href="#">Logout</a></p>
+            <p class="desktop-header">Welcome, userName here! &nbsp;&nbsp;<a href="#">Logout</a></p>
         </div>
-        <nav class="navigation">
+        <div class="mobile-nav">
             <ul>
-                <li><a class="selectedHeader" href="notifications.html">Notifications<span class="notice">5</span></a></li>
-                <li><a href="recruitment.html">Recruitment</a></li>
-                <li><a href="client.html">Clients</a></li>
-                <li><a href="inventory.html">Inventory</a></li>
-                <li><a href="employees.html">Employees</a></li>
-                <li><a href="timesheet.html">Timesheets</a></li>
-                <li><a href="clientfeedback.html">Client Feedback &amp; Evaluation</a></li>
-                <li><a href="payroll.html">Payroll</a></li>
-                <li><a href="#">Accounting</a></li>
-                <li><a href="reports.html">Reports</a></li>
+                <li><a href="#">RSIA IMS</a></li>
+                <li><a id="menu-icon" href="#"><img src="img/menu-icon1.png" alt="mobile menu icon"></a></li>
             </ul>
+        </div>
+        <nav id="main-nav">
+            <ul>
+                <li><a class="selectedHeader badge" data-badges="99" href="notifications.html">Notifications<span class="notice">5</span><br> <small>Need to Check</small></a></li>
+                <li><a href="recruitment.html">Recruitment<br> <small>Hiring Process</small></a></li>
+                <li><a href="client.html">Clients<br> <small>Customer Details</small></a></li>
+                <li><a href="inventory.html">Inventory<br> <small>Firearms &amp; Ammos</small></a></li>
+                <li><a href="employees.html">Employees<br> <small>Staff &amp; Colleagues</small></a></li>
+                <li><a href="timesheet.html">Timesheets<br> <small>Daily Time Records</small></a></li>
+                <li id="cfeedeval" ><a href="clientfeedback.html">Client Feedback &amp; Evaluation<br> <small>Assessments</small></a></li>
+                <li><a href="payroll.html">Payroll<br> <small>Payslips &amp; Wages</small></a></li>
+                <li><a href="#">Accounting<br> <small>Assets &amp; Liabilities</small></a></li>
+                <li><a href="reports.html">Reports<br> <small>Templates, etc.</small></a></li>
+                
+            </ul>
+            <a href="#" id="logout">Logout</a>
+            <a href="#" id="pull">Menu</a>
         </nav>
     </header>
-    <div id="wrapper">
-        <div id="content-nav" class="navigation">
+    <div id="main-content-wrapper">
+        <div id="main-content-nav" class="navigation">
             <ul>
-                <li><a href="#">Floating Employees<span class="notice">5</span></a></li>
-                <li><a href="#">Expiring Contracts<span class="notice">4</span></a></li>
-                <li class="selectedTab"><a href="#">Expiring Licenses<span class="notice">13</span></a></li>
-                <li><a href="#">Violation Reports<span class="notice">2</span></a></li>
+                <li><a class="badge" data-badges="36" id="float-emp" href="#">Floating Employees</a></li>
+                <li><a class="badge" data-badges="25" id="exp-contracts" href="#">Expiring Contracts</a></li>
+                <li class="selectedTab"><a class="badge" data-badges="99" id="exp-licenses" href="#">Expiring Licenses</a></li>
+                <li><a class="badge" data-badges="14" id="violation-rep" href="#">Violation Reports</a></li>
             </ul>
         </div>
-        <div class="main-content shadow">
+        <div id="main-contents"> 
             <div id="floating-employees" class="hidden-div">
                 <table>
                     <thead>
@@ -53,53 +61,48 @@
                             <th scope="col">Date Before Deployment Deadline</th>
                         </tr>
                     </thead>
-                    <!-- <tfoot>
-                        <tr>
-                            <td colspan="3">Data is updated every 15 minutes.</td>
-                        </tr>
-                    </tfoot> -->
                     <tbody>
                         <tr>
-                            <th scope="row"><a href="#">Nick Pettit</a></th>
-                            <td>nick@example.com</td>
-                            <td>Web designer</td>
-                            <td>January 01, 1900</td>
-                            <td>January 01, 1900</td>
+                            <td data-label="Employee Number" scope="row">floating-employees</a></th>
+                            <td data-label="Employee Name">nick@example.com</td>
+                            <td data-label="Date Employed">Web designer</td>
+                            <td data-label="Date of Floating Status">January 01, 1900</td>
+                            <td data-label="Date Before Deployment Deadline">January 01, 1900</td>
                         </tr>
                         <tr>
-                            <th scope="row">Dave McFarland</th>
-                            <td>dave@example.com</td>
-                            <td>Front-End Developer</td>
-                            <td>January 01, 1900</td>
-                            <td>January 01, 1900</td>
+                            <td data-label="Employee Number" scope="row">Dave McFarland</th>
+                            <td data-label="Employee Name">dave@example.com</td>
+                            <td data-label="Date Employed">Front-End Developer</td>
+                            <td data-label="Date of Floating Status">January 01, 1900</td>
+                            <td data-label="Date Before Deployment Deadline">January 01, 1900</td>
                         </tr>
                         <tr>
-                            <th scope="row">Andrew Chalkley</th>
-                            <td>andrew@example.com</td>
-                            <td>Front-End Developer</td>
-                            <td>January 01, 1900</td>
-                            <td>January 01, 1900</td>
+                            <td data-label="Employee Number" scope="row">Andrew Chalkley</th>
+                            <td data-label="Employee Name">andrew@example.com</td>
+                            <td data-label="Date Employed">Front-End Developer</td>
+                            <td data-label="Date of Floating Status">January 01, 1900</td>
+                            <td data-label="Date Before Deployment Deadline">January 01, 1900</td>
                         </tr>
                         <tr>
-                            <th scope="row">Guil Hernandez</th>
-                            <td>guil@example.com</td>
-                            <td>Web designer</td>
-                            <td>January 01, 1900</td>
-                            <td>January 01, 1900</td>
+                            <td data-label="Employee Number" scope="row">Guil Hernandez</th>
+                            <td data-label="Employee Name">guil@example.com</td>
+                            <td data-label="Date Employed">Web designer</td>
+                            <td data-label="Date of Floating Status">January 01, 1900</td>
+                            <td data-label="Date Before Deployment Deadline">January 01, 1900</td>
                         </tr>
                         <tr>
-                            <th>&nbsp;</th>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td data-label="Employee Number">&nbsp;</th>
+                            <td data-label="Employee Name">&nbsp;</td>
+                            <td data-label="Date Employed">&nbsp;</td>
+                            <td data-label="Date of Floating Status">&nbsp;</td>
+                            <td data-label="Date Before Deployment Deadline">&nbsp;</td>
                         </tr>
                         <tr>
-                            <th>&nbsp;</th>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td data-label="Employee Number">&nbsp;</th>
+                            <td data-label="Employee Name">&nbsp;</td>
+                            <td data-label="Date Employed">&nbsp;</td>
+                            <td data-label="Date of Floating Status">&nbsp;</td>
+                            <td data-label="Date Before Deployment Deadline">&nbsp;</td>
                         </tr>
                     </tbody>
                 </table>
@@ -118,52 +121,52 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row"><a href="#">CLI-00001</a></th>
-                            <td>AMA Tug</td>
-                            <td>Kalinga</td>
-                            <td>Kristine Taburada</td>
-                            <td>20</td>
-                            <td>Active</td>
+                            <td data-label="Client ID" scope="row"><a href="#">expiring-contracts</a></th>
+                            <td data-label="Client Name">AMA Tug</td>
+                            <td data-label="Client Address">Kalinga</td>
+                            <td data-label="Assigned Supervisor">Kristine Taburada</td>
+                            <td data-label="Days Before Contract Expires">20</td>
+                            <td data-label="Status (Active/Inactive)">Active</td>
                         </tr>
                         <tr>
-                            <th scope="row"><a href="#">CLI-00002</a></th>
-                            <td>AMA Tug</td>
-                            <td>Kalinga</td>
-                            <td>Kristine Taburada</td>
-                            <td>20</td>
-                            <td>Active</td>
+                            <td data-label="Client ID" scope="row"><a href="#">CLI-00002</a></th>
+                            <td data-label="Client Name">AMA Tug</td>
+                            <td data-label="Client Address">Kalinga</td>
+                            <td data-label="Assigned Supervisor">Kristine Taburada</td>
+                            <td data-label="Days Before Contract Expires">20</td>
+                            <td data-label="Status (Active/Inactive)">Active</td>
                         </tr>
                         <tr>
-                            <th scope="row"><a href="#">CLI-00003</a></th>
-                            <td>AMA Tug</td>
-                            <td>Kalinga</td>
-                            <td>Kristine Taburada</td>
-                            <td>20</td>
-                            <td>Active</td>
+                            <td data-label="Client ID" scope="row"><a href="#">CLI-00003</a></th>
+                            <td data-label="Client Name">AMA Tug</td>
+                            <td data-label="Client Address">Kalinga</td>
+                            <td data-label="Assigned Supervisor">Kristine Taburada</td>
+                            <td data-label="Days Before Contract Expires">20</td>
+                            <td data-label="Status (Active/Inactive)">Active</td>
                         </tr>
                         <tr>
-                            <th scope="row"><a href="#">CLI-00004</a></th>
-                            <td>AMA Tug</td>
-                            <td>Kalinga</td>
-                            <td>Kristine Taburada</td>
-                            <td>-10</td>
-                            <td>Inactive</td>
+                            <td data-label="Client ID" scope="row"><a href="#">CLI-00004</a></th>
+                            <td data-label="Client Name">AMA Tug</td>
+                            <td data-label="Client Address">Kalinga</td>
+                            <td data-label="Assigned Supervisor">Kristine Taburada</td>
+                            <td data-label="Days Before Contract Expires">-10</td>
+                            <td data-label="Status (Active/Inactive)">Inactive</td>
                         </tr>
                         <tr>
-                            <th>&nbsp;</th>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td data-label="Client ID">&nbsp;</th>
+                            <td data-label="Client Name">&nbsp;</td>
+                            <td data-label="Client Address">&nbsp;</td>
+                            <td data-label="Assigned Supervisor">&nbsp;</td>
+                            <td data-label="Days Before Contract Expires">&nbsp;</td>
+                            <td data-label="Status (Active/Inactive)">&nbsp;</td>
                         </tr>
                         <tr>
-                            <th>&nbsp;</th>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td data-label="Client ID">&nbsp;</th>
+                            <td data-label="Client Name">&nbsp;</td>
+                            <td data-label="Client Address">&nbsp;</td>
+                            <td data-label="Assigned Supervisor">&nbsp;</td>
+                            <td data-label="Days Before Contract Expires">&nbsp;</td>
+                            <td data-label="Status (Active/Inactive)">&nbsp;</td>
                         </tr>
                     </tbody>
                 </table>
@@ -182,44 +185,44 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row"><a href="#">EMP-00001</a></th>
-                            <td>Robert Lopez</td>
-                            <td>Male</td>
-                            <td>Floating</td>
-                            <td>February 10, 2016</td>        
-                            <td>February 28, 2018</td>
+                            <td data-label="Employee No" scope="row"><a href="#">expiring-licenses</a></th>
+                            <td data-label="Employee Name">Robert Lopez</td>
+                            <td data-label="Gender">Male</td>
+                            <td data-label="Status">Floating</td>
+                            <td data-label="SGL Expiration">February 10, 2016</td>        
+                            <td data-label="Firearms Expiration">February 28, 2018</td>
                         </tr>
                         <tr>
-                            <th scope="row"><a href="#">EMP-00002</a></th>
-                            <td>Roberta Lopeza</td>
-                            <td>Female</td>
-                            <td>Deployed</td>
-                            <td>February 10, 2016</td>        
-                            <td>February 28, 2018</td>
+                            <td data-label="Employee No" scope="row"><a href="#">EMP-00002</a></th>
+                            <td data-label="Employee Name">Roberta Lopeza</td>
+                            <td data-label="Gender">Female</td>
+                            <td data-label="Status">Deployed</td>
+                            <td data-label="SGL Expiration">February 10, 2016</td>        
+                            <td data-label="Firearms Expiration">February 28, 2018</td>
                         </tr>
                         <tr>
-                            <th scope="row"><a href="#">EMP-00003</a></th>
-                            <td>Robert de lopez</td>
-                            <td>Male</td>
-                            <td>Deployed</td>
-                            <td>February 10, 2016</td>        
-                            <td>February 28, 2018</td>
+                            <td data-label="Employee No" scope="row"><a href="#">EMP-00003</a></th>
+                            <td data-label="Employee Name">Robert de lopez</td>
+                            <td data-label="Gender">Male</td>
+                            <td data-label="Status">Deployed</td>
+                            <td data-label="SGL Expiration">February 10, 2016</td>        
+                            <td data-label="Firearms Expiration">February 28, 2018</td>
                         </tr>
                         <tr>
-                            <th>&nbsp;</th>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td data-label="Employee No">&nbsp;</th>
+                            <td data-label="Employee Name">&nbsp;</td>
+                            <td data-label="Gender">&nbsp;</td>
+                            <td data-label="Status">&nbsp;</td>
+                            <td data-label="SGL Expiration">&nbsp;</td>
+                            <td data-label="Firearms Expiration">&nbsp;</td>
                         </tr>
                         <tr>
-                            <th>&nbsp;</th>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td data-label="Employee No">&nbsp;</th>
+                            <td data-label="Employee Name">&nbsp;</td>
+                            <td data-label="Gender">&nbsp;</td>
+                            <td data-label="Status">&nbsp;</td>
+                            <td data-label="SGL Expiration">&nbsp;</td>
+                            <td data-label="Firearms Expiration">&nbsp;</td>
                         </tr>
                     </tbody>
                 </table> 
@@ -239,58 +242,51 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>April 14, 2014</td>
-                            <td>Manuel Miranda</td>
-                            <td>Bassig Grocery</td>
-                            <td>Karen Olivo</td>        
-                            <td>Karen Olivo - Supervisor</td>
-                            <td>Etiquette</td>
-                            <th scope="row"><a href="#">View Report</a></th>                        
+                            <td data-label="Date Reported">violation-reports</td>
+                            <td data-label="Employee Name">Manuel Miranda</td>
+                            <td data-label="Supervisor">Bassig Grocery</td>
+                            <td data-label="Client">Karen Olivo</td>        
+                            <td data-label="Reported By">Karen Olivo - Supervisor</td>
+                            <td data-label="Violation Type">Etiquette</td>
+                            <td data-label="Report" scope="row"><a href="#">View Report</a></th>                        
                         </tr>
                         <tr>
-                            <td>April 10, 2014</td>
-                            <td>Manuel Daway</td>
-                            <td>Savemore Grocery</td>
-                            <td>Jem Alibuyog</td>        
-                            <td>Armando Zabala - Store manager</td>
-                            <td>Etiquette</td>
-                            <th scope="row"><a href="#">View Report</a></th>                        
+                            <td data-label="Date Reported">April 10, 2014</td>
+                            <td data-label="Employee Name">Manuel Daway</td>
+                            <td data-label="Supervisor">Savemore Grocery</td>
+                            <td data-label="Client">Jem Alibuyog</td>        
+                            <td data-label="Reported By">Armando Zabala - Store manager</td>
+                            <td data-label="Violation Type">Etiquette</td>
+                            <td data-label="Report" scope="row"><a href="#">View Report</a></th>                        
                         </tr>
                         <tr>
-                            <th>&nbsp;</th>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td data-label="Date Reported">&nbsp;</th>
+                            <td data-label="Employee Name">&nbsp;</td>
+                            <td data-label="Supervisor">&nbsp;</td>
+                            <td data-label="Client">&nbsp;</td>
+                            <td data-label="Reported By">&nbsp;</td>
+                            <td data-label="Violation Type">&nbsp;</td>
+                            <td data-label="Report">&nbsp;</td>
                         </tr>
                         <tr>
-                            <th>&nbsp;</th>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <td>&nbsp;</td>
+                            <td data-label="Date Reported">&nbsp;</th>
+                            <td data-label="Employee Name">&nbsp;</td>
+                            <td data-label="Supervisor">&nbsp;</td>
+                            <td data-label="Client">&nbsp;</td>
+                            <td data-label="Reported By">&nbsp;</td>
+                            <td data-label="Violation Type">&nbsp;</td>
+                            <td data-label="Report">&nbsp;</td>
                         </tr>
                     </tbody>
                 </table> 
             </div>
         </div>
-        
-        <footer>
-            <a href="https://www.facebook.com/jake.pagalilauan" target="_blank">
-                <img src="img/fb.png" alt="Facebook Logo" class="social-icon">
-            </a>
-            <a href="https://us-mg6.mail.yahoo.com" target="_blank">
-                <img src="img/ymail2.png" alt="Yahoo Mail Logo" class="social-icon">
-            </a>
-            <a href="https://mail.google.com" target="_blank">
-                <img src="img/gmail.png" alt="Gmail Logo" class="social-icon">
-            </a>
-            <p>&copy; 2015 Arbee Jacob Pagalilauan</p>
-        </footer>
     </div>
+    
+    
+    
+    <!-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/nav_app.js"></script>
 </body>
 </html>

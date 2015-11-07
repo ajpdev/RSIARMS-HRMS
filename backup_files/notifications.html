@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Page</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/notificationStyles.css" type="text/css" charset="utf-8">
+<!-- <link rel="stylesheet" href="css/responsive.css"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body id="notificationBody">
+    <header>
+        <div class="logolink">
+            
+            <a href="notifications.html" class="logo">
+                <img src="img/HRMS-Logo.png">
+            </a>
+            <p>Welcome, userName here! &nbsp;&nbsp;<a href="#">Logout</a></p>
+        </div>
+        <nav class="navigation">
+            <ul>
+                <li><a class="selectedHeader" href="notifications.html">Notifications<span class="notice">5</span></a></li>
+                <li><a href="recruitment.html">Recruitment</a></li>
+                <li><a href="client.html">Clients</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="employees.html">Employees</a></li>
+                <li><a href="timesheet.html">Timesheets</a></li>
+                <li><a href="clientfeedback.html">Client Feedback &amp; Evaluation</a></li>
+                <li><a href="payroll.html">Payroll</a></li>
+                <li><a href="#">Accounting</a></li>
+                <li><a href="reports.html">Reports</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="wrapper">
+        <div id="content-nav" class="navigation">
+            <ul>
+                <li><a href="#">Floating Employees<span class="notice">5</span></a></li>
+                <li><a href="#">Expiring Contracts<span class="notice">4</span></a></li>
+                <li class="selectedTab"><a href="#">Expiring Licenses<span class="notice">13</span></a></li>
+                <li><a href="#">Violation Reports<span class="notice">2</span></a></li>
+            </ul>
+        </div>
+        <div class="main-content shadow">
+            <div id="floating-employees" class="hidden-div">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Employee Number</th>
+                            <th scope="col">Employee Name</th>
+                            <th scope="col">Date Employed</th>
+                            <th scope="col">Date of Floating Status</th>
+                            <th scope="col">Date Before Deployment Deadline</th>
+                        </tr>
+                    </thead>
+                    <!-- <tfoot>
+                        <tr>
+                            <td colspan="3">Data is updated every 15 minutes.</td>
+                        </tr>
+                    </tfoot> -->
+                    <tbody>
+                        <tr>
+                            <th scope="row"><a href="#">Nick Pettit</a></th>
+                            <td>nick@example.com</td>
+                            <td>Web designer</td>
+                            <td>January 01, 1900</td>
+                            <td>January 01, 1900</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Dave McFarland</th>
+                            <td>dave@example.com</td>
+                            <td>Front-End Developer</td>
+                            <td>January 01, 1900</td>
+                            <td>January 01, 1900</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Andrew Chalkley</th>
+                            <td>andrew@example.com</td>
+                            <td>Front-End Developer</td>
+                            <td>January 01, 1900</td>
+                            <td>January 01, 1900</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Guil Hernandez</th>
+                            <td>guil@example.com</td>
+                            <td>Web designer</td>
+                            <td>January 01, 1900</td>
+                            <td>January 01, 1900</td>
+                        </tr>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="expiring-contracts" class="hidden-div">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Client ID</th>
+                            <th scope="col">Client Name</th>
+                            <th scope="col">Client Address</th>
+                            <th scope="col">Assigned Supervisor</th>
+                            <th scope="col">Days Before Contract Expires</th>
+                            <th scope="col">Status (Active/Inactive)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><a href="#">CLI-00001</a></th>
+                            <td>AMA Tug</td>
+                            <td>Kalinga</td>
+                            <td>Kristine Taburada</td>
+                            <td>20</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><a href="#">CLI-00002</a></th>
+                            <td>AMA Tug</td>
+                            <td>Kalinga</td>
+                            <td>Kristine Taburada</td>
+                            <td>20</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><a href="#">CLI-00003</a></th>
+                            <td>AMA Tug</td>
+                            <td>Kalinga</td>
+                            <td>Kristine Taburada</td>
+                            <td>20</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><a href="#">CLI-00004</a></th>
+                            <td>AMA Tug</td>
+                            <td>Kalinga</td>
+                            <td>Kristine Taburada</td>
+                            <td>-10</td>
+                            <td>Inactive</td>
+                        </tr>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="expiring-licenses">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Employee No</th>
+                            <th scope="col">Employee Name</th>
+                            <th scope="col">Gender</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">SGL Expiration</th>
+                            <th scope="col">Firearms Expiration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><a href="#">EMP-00001</a></th>
+                            <td>Robert Lopez</td>
+                            <td>Male</td>
+                            <td>Floating</td>
+                            <td>February 10, 2016</td>        
+                            <td>February 28, 2018</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><a href="#">EMP-00002</a></th>
+                            <td>Roberta Lopeza</td>
+                            <td>Female</td>
+                            <td>Deployed</td>
+                            <td>February 10, 2016</td>        
+                            <td>February 28, 2018</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><a href="#">EMP-00003</a></th>
+                            <td>Robert de lopez</td>
+                            <td>Male</td>
+                            <td>Deployed</td>
+                            <td>February 10, 2016</td>        
+                            <td>February 28, 2018</td>
+                        </tr>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table> 
+            </div>
+            <div id="violation-reports" class="hidden-div">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Date Reported</th>
+                            <th scope="col">Employee Name</th>
+                            <th scope="col">Supervisor</th>
+                            <th scope="col">Client</th>
+                            <th scope="col">Reported By</th>
+                            <th scope="col">Violation Type</th>
+                            <th scope="col">Report</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>April 14, 2014</td>
+                            <td>Manuel Miranda</td>
+                            <td>Bassig Grocery</td>
+                            <td>Karen Olivo</td>        
+                            <td>Karen Olivo - Supervisor</td>
+                            <td>Etiquette</td>
+                            <th scope="row"><a href="#">View Report</a></th>                        
+                        </tr>
+                        <tr>
+                            <td>April 10, 2014</td>
+                            <td>Manuel Daway</td>
+                            <td>Savemore Grocery</td>
+                            <td>Jem Alibuyog</td>        
+                            <td>Armando Zabala - Store manager</td>
+                            <td>Etiquette</td>
+                            <th scope="row"><a href="#">View Report</a></th>                        
+                        </tr>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <th>&nbsp;</th>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table> 
+            </div>
+        </div>
+        
+        <footer>
+            <a href="https://www.facebook.com/jake.pagalilauan" target="_blank">
+                <img src="img/fb.png" alt="Facebook Logo" class="social-icon">
+            </a>
+            <a href="https://us-mg6.mail.yahoo.com" target="_blank">
+                <img src="img/ymail2.png" alt="Yahoo Mail Logo" class="social-icon">
+            </a>
+            <a href="https://mail.google.com" target="_blank">
+                <img src="img/gmail.png" alt="Gmail Logo" class="social-icon">
+            </a>
+            <p>&copy; 2015 Arbee Jacob Pagalilauan</p>
+        </footer>
+    </div>
+</body>
+</html>
