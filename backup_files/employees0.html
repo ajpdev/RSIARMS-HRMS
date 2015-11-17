@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Recruitment Page</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/employeesStyles.css" type="text/css" charset="utf-8">
+</head>
+<body id="notificationBody">
+    <header>
+        <div id="logolink">
+            
+            <a href="notifications.html" id="logo">
+                <img src="img/HRMS-Logo.png">
+            </a>
+            <p>Welcome, userName here! &nbsp;&nbsp;<a href="#">Logout</a></p>
+        </div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="notifications.html">Notifications<span class="notice">5</span></a></li>
+                <li><a href="recruitment.html">Recruitment</a></li>
+                <li><a href="client.html">Clients</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a class="selectedHeader" href="employees.html">Employees</a></li>
+                <li><a href="timesheet.html">Timesheets</a></li>
+                <li><a href="clientfeedback.html">Client Feedback &amp; Evaluation</a></li>
+                <li><a href="payroll.html">Payroll</a></li>
+                <li><a href="#">Accounting</a></li>
+                <li><a href="reports.html">Reports</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="wrapper">
+        <div id="employee-search">
+            <div id="body-top">
+                <h2><span>Employees</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>EMP-0003(emp no.): Robert Lopez (emp name)</span></h2>
+                <form>
+                    <label for="employee_status">Applicant Status</label>
+                    <select id="employee_status">
+                        <option value="#">All</option>
+                        <option value="#">New Applicant</option>
+                        <option value="#">Scheduled for Examination</option>
+                        <option value="#">Considered</option>
+                        <option value="#">Rejected</option>
+                        <option value="#">Scheduled for Interview</option>
+                        <option value="#">Floating</option>
+                        <option value="#">Deployed</option>
+                        <option value="#">Passed</option>
+                    </select>
+                    <!-- http://www.paulund.co.uk/how-to-create-pretty-search-forms -->
+                    <span>
+                        <input type="text" class="search rounded" placeholder="Search...">
+                     </span>
+                </form>
+             </div>   
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Employee Number</th>
+                        <th scope="col">Employee Name</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Birth Date</th>
+                        <th scope="col">Employment Date</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <!-- <tfoot>
+                    <tr>
+                        <td colspan="3">Data is updated every 15 minutes.</td>
+                    </tr>
+                </tfoot> -->
+                <tbody>
+                    <tr>
+                        <th scope="row"><a href="#">EMP-00003</a></th>
+                        <td>Robert Lopez</td>
+                        <td>Male</td>
+                        <td>January 01, 1900</td>
+                        <td>January 01, 1900</td>
+                        <td>Security Guard</td>
+                        <td>Floating</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="#">EMP-00002</a></th>
+                        <td>Jonathan Larson</td>
+                        <td>Male</td>
+                        <td>January 01, 1900</td>
+                        <td>January 01, 1900</td>
+                        <td>Security Guard</td>
+                        <td>Floating</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><a href="#">EMP-00001</a></th>
+                        <td>Manuel Miranda</td>
+                        <td>Male</td>
+                        <td>January 01, 1900</td>
+                        <td>January 01, 1900</td>
+                        <td>Security Guard</td>
+                        <td>Deployed</td>
+                    </tr>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div id="employee-details">
+            <nav id="content-nav">
+                <ul>
+                    <li><a href="#">Employee Profile<span class="notice">5</span></a></li>
+                    <li><a href="#">Deployment and Asset History<span class="notice">4</span></a></li>
+                    <li class="selectedTab"><a href="#">Timesheet<span class="notice">13</span></a></li>
+                    <li><a href="#">Violation History<span class="notice">2</span></a></li>
+                    <li><a href="#">Evaluation Reports<span class="notice">2</span></a></li>
+                </ul>
+            </nav>
+            <div class="main-content shadow">
+                <div id="emp-profile">
+                    <form>
+                        <div>
+                            <img src="img\no-photo-available2.jpg" alt="Employee Image">
+                            <input type="button" value="Update Profile">
+                        </div>
+                        <div>
+                            <!-- INPUT ELEMENTS HERE  -->
+                            
+                            <label for="">Date Employed</label>
+                            <input type="text" id="" value="04-01-2014"> 
+                            
+                            <label for="">Employee Number</label>
+                            <input type="text" id="" value="EMP-0003">
+                            
+                            <label for="">Status</label>
+                            <input type="text" id="" value="Floating">
+                            
+                            <label for="">First Name</label>
+                            <input type="text" id="" value="Robert">
+                            
+                            <label for="">Middle Name</label>
+                            <input type="text" id="" value="Cruz">    
+                            
+                            <label for="">Last Name</label>
+                            <input type="text" id="" value="Cruz">    
+                                              
+                            <label for="">Birthday</label>
+                            <input type="text" id="" value="Cruz">    
+                            
+                            <label for="">Age</label>
+                            <input type="text" id="" value="Cruz">    
+                            
+                            <label for="">Address</label>
+                            <input type="text" id="" value="Cruz">    
+                            
+                            <label for="">Gender</label>
+                            <input type="text" id="" value="Cruz">    
+                            
+                            <label for="">Contact No</label>
+                            <input type="text" id="" value="Cruz">    
+                            
+                            <label for="">Email Address</label>
+                            <input type="text" id="" value="Cruz">    
+                            
+                            <label for="">SSS No</label>
+                            <input type="text" id="" value="Cruz">    
+                            
+                            <label for="">PhilHealth No</label>
+                            <input type="text" id="" value="Cruz">    
+                            
+                            <label for="">Pag-ibig No</label>
+                            <input type="text" id="" value="Cruz">    
+                            
+                            <label for="">TIN</label>
+                            <input type="text" id="" value="Cruz">    
+                            
+                            <label for="">SG License No</label>
+                            <input type="text" id="" value="Cruz"> 
+                            
+                            <label for="">SGL Expiration</label>
+                            <input type="text" id="" value="Cruz">
+                            
+                            <label for="">Employment History (Employer Name, Job, Yrs of Employment)</label> 
+                            <textarea>
+                                123 Security Agency, Security Guard, 2009-2013
+                                ABC Security Agency, Security Guard, 2000-2008
+                                La Paz School, Maintenance Staff, 1992-2000
+                            </textarea>
+                            
+                            <label for="">Trainings Attended (Title of Training, Date/Venue, Sponsor)</label>
+                            <textarea>
+                                SG Training, Feb 22, 1999 - Makati City, ABC Security Agency
+                            </textarea>
+                            
+                            <label for="">Attachments (SG License, Clearances, Training Certificates, etc.)</label>
+                            <div>
+                                <ul>
+                                    <li><a href="#">Resume.docx</a></li>
+                                    <li><a href="#">SG_License.jpeg</a></li>
+                                    <li><a href="#">Brgy_Clearance.pdf</a></li>
+                                    <li><a href="#">NBI Clearance.pdf</a></li>
+                                </ul>
+                                
+                                
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div id="deployment-asset-history">
+                    <h2>Current Deployment</h2>
+                    <div style="background-color: grey">
+                        <p>Not currently deployed</p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Deployment No</th>
+                                    <th scope="col">Client</th>
+                                    <th scope="col">Deployment Start Date</th>
+                                    <th scope="col">Deployment End Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><a href="#">APR-2014-AMT-001</a></th>
+                                    <td>FICO Bank</td>
+                                    <td>April 16, 2014</td>
+                                    <td>April 30, 2014</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- <input type="button" value="Generate DDO Report">
+                        <input type="button" value="Generate Endorsement Letter">
+                        <a href="#">Generate DDO Report</a>
+                        <a href="#">Generate Endorsemnet Letter</a> -->
+                        <input type="button" id="" value="Assign Firearms">
+                        <input type="button" id="" value="Deploy Employee">
+                    </div>
+                    
+                    <h2>Deployment History</h2>
+                    <div style="background-color: grey">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Client</th>
+                                    <th scope="col">Deployment Start Date</th>
+                                    <th scope="col">Deployment End Date</th>
+                                    <th scope="col">Reason for End</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><a href="#">&nbsp;</a></th>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>No data to display.</p>
+                    </div>
+                    
+                    <!-- For Deploy Employee Screen -->
+                    <div id="deploy-emp">
+                        <h2>Deploy Employee</h2>
+                            <form>
+                                 <label for="">DDO No</label>
+                                 <input type="text" id="" name="">
+                                 
+                                 <label for="">Client</label>
+                                 <select>
+                                     <option>Client 1 from DB</option>
+                                     <option>Client 2 from DB</option>
+                                     <option>Client 3 from DB</option>
+                                 </select>
+                                 
+                                 <label for="">Client Address</label>
+                                 <input type="text" id="" name="" value="based from client selected e.g. Solana, Cagayan">
+                                 
+                                 <label for="">Date From</label>
+                                 <input type="text" id="" name="" value="Date Picker Here">
+                                 
+                                 <label for="">Date To</label>
+                                 <input type="text" id="" name="" value="Date Picker Here">
+                                 
+                                 <label for="">Shift Schedule</label>
+                                 <select>
+                                     <option>Schedule 1 from DB</option>
+                                     <option>Schedule 2 from DB</option>
+                                     <option>Schedule 3 from DB</option>
+                                 </select>
+                                 
+                                 <label for="">Supervisor</label>
+                                 <select>
+                                     <option>Supervisor 1 from DB</option>
+                                     <option>Supervisor 2 from DB</option>
+                                     <option>Supervisor 3 from DB</option>
+                                 </select>
+                          
+                                                          
+                                 <h3>Assigned Firearm</h3>
+                                 <p><a href="#">Add Item</a></p>
+                                 <table>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Type of FA</th>
+                                            <th scope="col">Serial No</th>
+                                            <th scope="col">Kind and Cal</th>
+                                            <th scope="col">Make</th>
+                                            <th scope="col">No. of Ammo</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row"><a href="#">&nbsp;</a></th>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                            <td>&nbsp;</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>No data to display.</p>
+                                 <input type="reset" value="CANCEL">
+                                 <input type="submit" value="SAVE">
+                            </form>
+                      </div>
+                      
+                      <!--TODO: For Assign Firearms Screen -->
+                      <div id="assign-firearms">
+                            <form>
+                                <label for="type_of_firearms">Type of Firearms</label>
+                                <select id="type_of_firearms">
+                                    <option value="">from DB: Cal. 38</option>
+                                    <option value="">from DB: Cal. 45</option>
+                                </select>
+                                 
+                                <label for="serial_no">Serial No</label>
+                                <select id="serial_no">
+                                    <option value="">from DB: 1025021</option>
+                                    <option value="">from DB: 1025021</option>
+                                </select>
+                                
+                                <label for="kind_and_cal">Kind and Cal</label>
+                                <input id="kind_and_cal" name="kind_and_cal" type="text" value="M202/38">
+                                
+                                <label for="make">Make</label>
+                                <input id="make" name="make" type="text" value="RVLRIARMSCOR">
+                                
+                                <label for="no_of_ammo">No of Ammo</label>
+                                <input id="no_of_ammo" name="no_of_ammo" type="number" min="0" max="100" value="0">
+                                
+                                                        
+                                <input type="reset" value="CANCEL">
+                                <input type="submit" value="SAVE">
+                                
+                            </form>
+                           
+                        </div>
+                </div>
+                
+                
+                <div id="emp-timesheet" style="display: none">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Client ID</th>
+                                <th scope="col">Client Name</th>
+                                <th scope="col">Client Address</th>
+                                <th scope="col">Assigned Supervisor</th>
+                                <th scope="col">Days Before Contract Expires</th>
+                                <th scope="col">Status (Active/Inactive)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><a href="#">CLI-00001</a></th>
+                                <td>AMA Tug</td>
+                                <td>Kalinga</td>
+                                <td>Kristine Taburada</td>
+                                <td>20</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div id="emp-violation-history" style="display: none">
+                     
+                </div>
+                <div id="emp-evaluation-report" style="display: none">
+                
+                </div>
+            </div>    
+        </div>
+        <div id="emp_reports">
+            <h2><a href="#">Back</a></h2>
+            <h1>PDF Report here formatted with the Report details</h1>
+            <p>Includes the following as e.g.</p>
+            <pre>
+                
+                DDO No: APR-2014-AMIT-001
+                Date Issued: 04/10/2014
+                Expiry Date: 04/30/2014
+                
+                Name of Guard, Place of Duty, Date of Duty, Type of FA/SN, No of Ammo
+            </pre>
+        </div>
+        
+        <footer>
+            <a href="https://www.facebook.com/jake.pagalilauan" target="_blank">
+                <img src="img/fb.png" alt="Facebook Logo" class="social-icon">
+            </a>
+            <a href="https://us-mg6.mail.yahoo.com" target="_blank">
+                <img src="img/ymail2.png" alt="Yahoo Mail Logo" class="social-icon">
+            </a>
+            <a href="https://mail.google.com" target="_blank">
+                <img src="img/gmail.png" alt="Gmail Logo" class="social-icon">
+            </a>
+            <p>&copy; 2015 Arbee Jacob Pagalilauan</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -4,222 +4,231 @@
 <meta charset="ISO-8859-1">
 <title>Recruitment Page</title>
 <link rel="stylesheet" href="css/reset.css">
-<link rel="stylesheet" href="css/clientfeedbackStyles.css" type="text/css" charset="utf-8">
+<link rel="stylesheet" href="css/clientfeedback-main.css">
+<link rel="stylesheet" href="css/clientfeedback-responsive.css">
 </head>
-<body id="notificationBody">
+<body>
     <header>
-        <div id="logolink">
+        <div class="logolink">
             
-            <a href="notifications.html" id="logo">
-                <img src="img/HRMS-Logo.png">
+            <a class="desktop-header" href="notifications.html">
+                <img src="img/HRMS-Logo.png" alt="rsia-rms main logo">
             </a>
-            <p>Welcome, userName here! &nbsp;&nbsp;<a href="#">Logout</a></p>
+            <p class="desktop-header">Welcome, userName here! &nbsp;&nbsp;<a href="#">Logout</a></p>
+        </div>
+        <div class="mobile-nav">
+            <ul>
+                <li><a href="#">RSIA IMS</a></li>
+                <li><a id="menu-icon" href="#"><img src="img/menu-icon1.png" alt="mobile menu icon"></a></li>
+            </ul>
         </div>
         <nav id="main-nav">
             <ul>
-                <li><a href="notifications.html">Notifications<span class="notice">5</span></a></li>
-                <li><a href="recruitment.html">Recruitment</a></li>
-                <li><a href="client.html">Clients</a></li>
-                <li><a href="inventory.html">Inventory</a></li>
-                <li><a href="employees.html">Employees</a></li>
-                <li><a href="timesheet.html">Timesheets</a></li>
-                <li><a class="selectedHeader" href="clientfeedback.html">Client Feedback &amp; Evaluation</a></li>
-                <li><a href="payroll.html">Payroll</a></li>
-                <li><a href="#">Accounting</a></li>
-                <li><a href="reports.html">Reports</a></li>
+                <li><a class="badge" data-badges="99" href="notifications.html">Notifications<span class="notice">5</span><br> <small>Need to Check</small></a></li>
+                <li><a href="recruitment.html">Recruitment<br> <small>Hiring Process</small></a></li>
+                <li><a href="client.html">Clients<br> <small>Customer Details</small></a></li>
+                <li><a href="inventory.html">Inventory<br> <small>Firearms &amp; Ammos</small></a></li>
+                <li><a href="employees.html">Employees<br> <small>Staff &amp; Colleagues</small></a></li>
+                <li><a href="timesheet.html">Timesheets<br> <small>Daily Time Records</small></a></li>
+                <li id="cfeedeval" ><a class="selectedHeader" href="clientfeedback.html">Client Feedback &amp; Evaluation<br> <small>Assessments</small></a></li>
+                <li><a href="payroll.html">Payroll<br> <small>Payslips &amp; Wages</small></a></li>
+                <li><a href="#">Accounting<br> <small>Assets &amp; Liabilities</small></a></li>
+                <li><a href="reports.html">Reports<br> <small>Templates, etc.</small></a></li>
+                
             </ul>
+            <a href="#" id="logout">Logout</a>
+            <a href="#" id="pull">Menu</a>
         </nav>
     </header>
-    <div id="wrapper">
-              
-        <div>
-            <nav id="content-nav">
-                <ul>
-                    <li><a href="#">Violation Reports</a></li>
-                    <li><a href="#">Client Feedback</a></li>
-                    <li class="selectedTab"><a href="#">Performance Evaluation</a></li>
-                </ul>
-            </nav>
-            <div class="main-content shadow">
-                <div id="violation-reports">
-                    <a href="#">+ Add Violation Report</a>
-                    
-                    <label for="">Employee Name</label>
-                    <select>
-                        <option>Select Employee</option>
-                        <option>Name 1 from DB</option>
-                        <option>Name 2 from DB</option>
-                    </select>
-                    
-                    <label for="">Client</label>
-                    <select>
-                        <option>Select Client</option>
-                        <option>Client 1 from DB</option>
-                        <option>Client 2 from DB</option>
-                    </select>
-                    
-                    <table>
-                        <thead>
-                            <tr>
-                                <th scope="col">Date Reported</th>
-                                <th scope="col">Employee Name</th>
-                                <th scope="col">Client</th>
-                                <th scope="col">Reported By</th>
-                                <th scope="col">Violation Type</th>
-                                <th scope="col">Report Link</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>04/10/2014</td>
-                                <td>Manuel Miranda</td>
-                                <td>Bassig Grocery</td>
-                                <td>Karen Olivo - Supervisor</td>
-                                <td>Etiquette</td>
-                                <td><a href="#">View Report</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div id="violation-report-window">
-                        <label for="">Date Reported</label>
-                        <input type="text" id="" name="" value="">
-                        
-                        <label for="">Employee Name</label>
-                        <input type="text" id="" name="" value="Manuel Miranda">
-                        
-                        <label for="">Client</label>
-                        <input type="text" id="" name="" value="Bassig Grocery">
-                        
-                        <label for="">Reported By</label>
-                        <input type="text" id="" name="" value="Karen Olivo - Supervisor">
-                       
-                        <label for="">Violation Type</label>
-                        <input type="text" id="" name="" value="Etiquette">
-                        
-                        <label for="">Violation Details</label>
-                        <input type="text" id="" name="" value="Caught sleeping on post during his duty">
-                        
-                        <label for="">Action</label>
-                        <select>
-                            <option>Select Action</option>
-                            <option>Action 1</option>
-                        </select>                       
-                        <label for="">Decision</label>
-                        <select>
-                            <option>Select Decision</option>
-                            <option>Decision 1</option>                            
-                        </select>
-                        
-                        <label for="">Comment</label>
-                        <textarea id=""></textarea>
-                        
-                        <input type="button" id="" value="Cancel">
-                        <input type="button" id="" value="Save">
-                    </div>
-                </div>
-                
-                <div id="client-feedback">
-                    
-                </div>
-                <div id="perf-evaluation">
-                    <a href="#">+ Add Performance Evaluation</a>
-                    
-                    <label for="">Employee Name</label>
-                    <select>
-                        <option>Select Employee</option>
-                        <option>Name 1 from DB</option>
-                        <option>Name 2 from DB</option>
-                    </select>
-                    
-                    <label for="">Client</label>
-                    <select>
-                        <option>Select Client</option>
-                        <option>Client 1 from DB</option>
-                        <option>Client 2 from DB</option>
-                    </select>
-                    
-                    <table>
-                        <thead>
-                            <tr>
-                                <th scope="col">Evaluation Date</th>
-                                <th scope="col">Employee Name</th>
-                                <th scope="col">Client</th>
-                                <th scope="col">Evaluated By</th>
-                                <th scope="col">Evaluation Result</th>
-                                <th scope="col">Report Link</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>04/10/2014</td>
-                                <td>Robert Lopez</td>
-                                <td>Fico Bank</td>
-                                <td>Cristin Millioti - Supervisor</td>
-                                <td>Good Performance</td>
-                                <td><a href="#">View Report</a></td>
-                            </tr>
-                            <tr>
-                                <td>04/10/2014</td>
-                                <td>Manuel Miranda</td>
-                                <td>Bassig Grocery</td>
-                                <td>Karen Olivo - Supervisor</td>
-                                <td>Poor Performance</td>
-                                <td><a href="#">View Report</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div id="perf-evaluation-window">
-                        <label for="">Evaluation Date</label>
-                        <input type="text" id="" name="" value="">
-                        
-                        <label for="">Employee Name</label>
-                        <input type="text" id="" name="" value="Manuel Miranda">
-                        
-                        <label for="">Client</label>
-                        <input type="text" id="" name="" value="Bassig Grocery">
-                        
-                        <label for="">Evaluated By</label>
-                        <input type="text" id="" name="" value="Karen Olivo - Supervisor">
-                       
-                        <label for="">Evaluation Result</label>
-                        <input type="text" id="" name="" value="Etiquette">
-                        
-                        <label for="">Evaluation Details</label>
-                        <input type="text" id="" name="" value="Caught sleeping on post during his duty">
-                        
-                        <label for="">Action</label>
-                        <select>
-                            <option>Select Action</option>
-                            <option>Action 1</option>
-                        </select>                       
-                        <label for="">Decision</label>
-                        <select>
-                            <option>Select Decision</option>
-                            <option>Decision 1</option>                            
-                        </select>
-                        
-                        <label for="">Comment</label>
-                        <textarea id=""></textarea>
-                        
-                        <input type="button" id="" value="Cancel">
-                        <input type="button" id="" value="Save">
-                    </div>
-                </div>
-            </div>    
+    <div id="main-content-wrapper">
+        <div id="main-content-nav" class="navigation">
+            <ul>
+                <li><a class="badge" data-badges="36" id="float-emp" href="#">Floating Employees</a></li>
+                <li><a class="badge" data-badges="25" id="exp-contracts" href="#">Expiring Contracts</a></li>
+                <li class="selectedTab"><a class="badge" data-badges="99" id="exp-licenses" href="#">Expiring Licenses</a></li>
+                <li><a class="badge" data-badges="14" id="violation-rep" href="#">Violation Reports</a></li>
+            </ul>
         </div>
-        
-        <footer>
-            <a href="https://www.facebook.com/jake.pagalilauan" target="_blank">
-                <img src="img/fb.png" alt="Facebook Logo" class="social-icon">
-            </a>
-            <a href="https://us-mg6.mail.yahoo.com" target="_blank">
-                <img src="img/ymail2.png" alt="Yahoo Mail Logo" class="social-icon">
-            </a>
-            <a href="https://mail.google.com" target="_blank">
-                <img src="img/gmail.png" alt="Gmail Logo" class="social-icon">
-            </a>
-            <p>&copy; 2015 Arbee Jacob Pagalilauan</p>
-        </footer>
+        <div id="main-contents"> 
+            <div>
+                <nav id="content-nav">
+                    <ul>
+                        <li><a href="#">Violation Reports</a></li>
+                        <li><a href="#">Client Feedback</a></li>
+                        <li class="selectedTab"><a href="#">Performance Evaluation</a></li>
+                    </ul>
+                </nav>
+                <div class="main-content shadow">
+                    <div id="violation-reports">
+                        <a href="#">+ Add Violation Report</a>
+                        
+                        <label for="">Employee Name</label>
+                        <select>
+                            <option>Select Employee</option>
+                            <option>Name 1 from DB</option>
+                            <option>Name 2 from DB</option>
+                        </select>
+                        
+                        <label for="">Client</label>
+                        <select>
+                            <option>Select Client</option>
+                            <option>Client 1 from DB</option>
+                            <option>Client 2 from DB</option>
+                        </select>
+                        
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Date Reported</th>
+                                    <th scope="col">Employee Name</th>
+                                    <th scope="col">Client</th>
+                                    <th scope="col">Reported By</th>
+                                    <th scope="col">Violation Type</th>
+                                    <th scope="col">Report Link</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>04/10/2014</td>
+                                    <td>Manuel Miranda</td>
+                                    <td>Bassig Grocery</td>
+                                    <td>Karen Olivo - Supervisor</td>
+                                    <td>Etiquette</td>
+                                    <td><a href="#">View Report</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div id="violation-report-window">
+                            <label for="">Date Reported</label>
+                            <input type="text" id="" name="" value="">
+                            
+                            <label for="">Employee Name</label>
+                            <input type="text" id="" name="" value="Manuel Miranda">
+                            
+                            <label for="">Client</label>
+                            <input type="text" id="" name="" value="Bassig Grocery">
+                            
+                            <label for="">Reported By</label>
+                            <input type="text" id="" name="" value="Karen Olivo - Supervisor">
+                           
+                            <label for="">Violation Type</label>
+                            <input type="text" id="" name="" value="Etiquette">
+                            
+                            <label for="">Violation Details</label>
+                            <input type="text" id="" name="" value="Caught sleeping on post during his duty">
+                            
+                            <label for="">Action</label>
+                            <select>
+                                <option>Select Action</option>
+                                <option>Action 1</option>
+                            </select>                       
+                            <label for="">Decision</label>
+                            <select>
+                                <option>Select Decision</option>
+                                <option>Decision 1</option>                            
+                            </select>
+                            
+                            <label for="">Comment</label>
+                            <textarea id=""></textarea>
+                            
+                            <input type="button" id="" value="Cancel">
+                            <input type="button" id="" value="Save">
+                        </div>
+                    </div>
+                    
+                    <div id="client-feedback">
+                        
+                    </div>
+                    <div id="perf-evaluation">
+                        <a href="#">+ Add Performance Evaluation</a>
+                        
+                        <label for="">Employee Name</label>
+                        <select>
+                            <option>Select Employee</option>
+                            <option>Name 1 from DB</option>
+                            <option>Name 2 from DB</option>
+                        </select>
+                        
+                        <label for="">Client</label>
+                        <select>
+                            <option>Select Client</option>
+                            <option>Client 1 from DB</option>
+                            <option>Client 2 from DB</option>
+                        </select>
+                        
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Evaluation Date</th>
+                                    <th scope="col">Employee Name</th>
+                                    <th scope="col">Client</th>
+                                    <th scope="col">Evaluated By</th>
+                                    <th scope="col">Evaluation Result</th>
+                                    <th scope="col">Report Link</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>04/10/2014</td>
+                                    <td>Robert Lopez</td>
+                                    <td>Fico Bank</td>
+                                    <td>Cristin Millioti - Supervisor</td>
+                                    <td>Good Performance</td>
+                                    <td><a href="#">View Report</a></td>
+                                </tr>
+                                <tr>
+                                    <td>04/10/2014</td>
+                                    <td>Manuel Miranda</td>
+                                    <td>Bassig Grocery</td>
+                                    <td>Karen Olivo - Supervisor</td>
+                                    <td>Poor Performance</td>
+                                    <td><a href="#">View Report</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div id="perf-evaluation-window">
+                            <label for="">Evaluation Date</label>
+                            <input type="text" id="" name="" value="">
+                            
+                            <label for="">Employee Name</label>
+                            <input type="text" id="" name="" value="Manuel Miranda">
+                            
+                            <label for="">Client</label>
+                            <input type="text" id="" name="" value="Bassig Grocery">
+                            
+                            <label for="">Evaluated By</label>
+                            <input type="text" id="" name="" value="Karen Olivo - Supervisor">
+                           
+                            <label for="">Evaluation Result</label>
+                            <input type="text" id="" name="" value="Etiquette">
+                            
+                            <label for="">Evaluation Details</label>
+                            <input type="text" id="" name="" value="Caught sleeping on post during his duty">
+                            
+                            <label for="">Action</label>
+                            <select>
+                                <option>Select Action</option>
+                                <option>Action 1</option>
+                            </select>                       
+                            <label for="">Decision</label>
+                            <select>
+                                <option>Select Decision</option>
+                                <option>Decision 1</option>                            
+                            </select>
+                            
+                            <label for="">Comment</label>
+                            <textarea id=""></textarea>
+                            
+                            <input type="button" id="" value="Cancel">
+                            <input type="button" id="" value="Save">
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
     </div>
+    <!-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/clientfeedback.js"></script>
 </body>
 </html>
