@@ -1,0 +1,563 @@
+/*************************************
+ RESET for RESPONSIVE DESIGNS
+ https://css-tricks.com/box-sizing/ 
+*************************************/
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+/**************
+ NORMAL RESET
+ ***************/
+* {
+    padding: 0;
+    margin: 0;   
+}
+
+/***************************
+OTHER CLASSES
+****************************/
+.hide {
+    display: none;
+}
+.shadow {
+    /*used http://www.cssmatic.com/box-shadow to generate shadow effect*/
+    -webkit-box-shadow: 0px 12px 25px 0px rgba(0,0,0,0.38); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 0px 12px 25px 0px rgba(0,0,0,0.38); /* Firefox 3.5 - 3.6 */
+    box-shadow: 0px 12px 25px 0px rgba(0,0,0,0.38); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+/***************************
+GENERIC CLASSES
+body, a, p, h1, etc.
+***************************/
+
+body {
+    font-family: 'Open San', sans-serif;
+    background-color: #fff;
+}
+
+header {
+    width: 100%;
+}
+
+nav {
+    text-align: center;
+    background-color: rgb(49,62,159); /*can be classed*/
+  
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+}
+
+p {
+    font-size: 0.75em;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto 40px;
+    font-size: 0.6em;
+}
+
+footer {
+    font-size: 0.75em;
+    text-align: center;
+    padding-top: 50px;
+    color: #000;
+}
+
+/***************************
+CONTENT TABLES (OK NA TO)
+***************************/
+
+#applicant-search table th {
+    font-weight: 400;
+    background: rgb(240,240,240);
+    color: black;
+    font-weight: 700;
+}
+
+#applicant-search table tr {
+    background: white;
+    margin-bottom: 5px;
+}
+
+#applicant-search table tr:nth-child(even) {
+    background: rgb(247,247,247);
+}
+
+#applicant-search table th, #applicant-search table td {
+    text-align: left;
+    padding: 10px;
+    font-weight: 300;
+    border: 1px solid #ccc; /*added this for border*/
+}
+
+
+/*******************************
+HEADING (above main navigation)
+********************************/
+
+
+/***START MOBILE MAIN NAV***/
+div.mobile-nav ul {
+    list-style:none;
+    background-color: #444;
+    text-align: center;
+}
+
+div.mobile-nav li {
+    display: inline-block;
+    font-family: 'Oswald', sans-serif; /*TODO: change to good font*/
+    font-size: 1.2em;
+    line-height: 40px;
+    height: 40px;
+}
+
+div.mobile-nav li:first-child {
+    text-align: left;
+    padding-left: 10%;
+    width: 70%;
+    margin-right: 13%;
+}
+
+div.mobile-nav li:last-child {
+    width: 15%;
+}
+
+div.mobile-nav a {    
+    float: left;
+    text-decoration: none;
+    color: rgb(33,151,245);
+    transition: .3s background-color;
+    width: 100%;
+}
+
+div.mobile-nav img {
+    padding: 3px 0;
+    height: 40px;
+    min-width: 35px;
+}
+
+nav a#pull {
+    display: none;
+}
+/***END MOBILE MAIN NAV***/
+
+/***START LOGO ABOVE MAIN NAV***/
+div.logolink img {
+    width: 100%;
+}
+
+div .desktop-header {
+    display: none;
+}
+
+/***END LOGO ABOVE MAIN NAV***/
+
+nav ul li { 
+    height: 40px; 
+    width: 50%;
+    display: inline-block;
+    /*float: left;    */
+    border: 1px solid rgba(255,255,255,0.8);
+    /*overflow: hidden;*/
+}
+
+li#cfeedeval a {
+    font-size: 0.6em;
+}
+
+/*************************
+ * WORKAROUND for margins when using inline-block for <li>'s
+ * http://stackoverflow.com/questions/4969082/unwanted-margin-in-inline-block-list-items
+ * https://css-tricks.com/fighting-the-space-between-inline-block-elements/
+* ************************/
+nav ul, #main-content-nav ul { font-size:0; }
+nav ul li, #main-content-wrapper ul li { font-size:16px;}
+
+nav ul li a {
+    display: block;
+    text-align: center;
+    font: bold 0.625em/1.4 'Cutive', Helvetica, Verdana, Arial, sans-serif; /**TODO: change if needed**/
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0,0,0,0.3);/*adds a nice effect with yellow border **/
+    padding: 4px 0;
+}
+
+nav small {
+    color: #ccc;    
+    font: 100 8px/1 Helvetica, Verdana, Arial, sans-serif;
+}
+
+nav ul li:nth-child(even){
+    border-right: none;
+    border-bottom: none;
+}
+nav ul li:nth-child(odd){
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+}
+
+nav ul li:nth-child(even) a{
+    border-right: none;
+}
+nav ul li:nth-child(odd) a{
+    border-left: none;
+}
+
+a#logout {
+    padding: 5px 0;
+    /*clear:both;*/
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    border-top: 1px solid rgba(255,255,255,0.8);;
+    border-bottom: 1px solid rgba(255,255,255,0.8);;
+}
+
+.selectedHeader {
+    background-color: #11029b;
+    color: yellow;
+}
+
+.selectedHeader small {
+    color: #fff;
+    font-weight: bold;
+}
+
+
+
+.badge {
+   position:relative;
+}
+
+.selectedHeader.badge[data-badges]:after {
+   content:attr(data-badges);
+   position:absolute;
+   top: -3px;
+   right: 10%;
+   font-size: 1em;
+   background:rgba(255,255,0,1.0);
+   color:rgba(0,0,0,0.8);
+   width:2em; /**18px;**/
+   height:2em;
+   text-align:center;
+   line-height:2em;
+   border-radius:50%;
+   box-shadow:0 0 1px #333;
+}
+
+/********************************************
+ * Line above are the template for all pages
+ ********************************************/
+
+#main-contents {
+    border-radius: 5px 5px 0 0;
+    /*margin-top: 20px;*/
+    padding: 20px 3%;
+}
+
+#main-contents h2 {
+    font-weight: bold;
+    font-size: 1em;
+}
+
+
+/*******************************
+* FORM ELEMENTS
+********************************/
+
+
+fieldset {
+    margin-top: 10px;
+    /*border:1px solid rgba(153,153,153,0.3);*/
+    /*border:1px solid rgba(240,240,240,0.3); use this for larger window size*/
+    border-radius:8px;
+    /*box-shadow:0 0 2px #999;*/
+    padding: 5px 0 15px;
+}
+legend {
+    margin-left: 5px;
+    font-size: 0.8em;
+    background:#fff;
+    font-weight: bold;
+    color: blue;
+}
+#requirements_attachment {
+    padding: 10px;
+    background-color: rgba(240,240,240,0.8);
+    margin: 0 auto;
+    width: 80%;
+}
+#requirements_attachment p {
+    margin-top: 10px;
+}
+
+
+#applicant-info,
+#applicant-eval-results {
+    box-shadow:0 0 3px #999;
+    /** top-left, top-right: 15px
+     *     bottom-left, bottom-right: 5px
+     **/
+    border-radius: 15px 15px 5px 5px;
+}
+
+section {
+    margin-top: 10px;
+    padding: 10px;
+    /*padding-top: 5px;
+    padding-bottom: 5px;*/
+}
+
+h3 {
+    text-align: center;
+    text-decoration: underline;
+}
+
+div#buttons {
+    margin: 10px 0;
+    text-align: center;
+}
+
+input.datepick {
+    display: inline;
+    width: 100px;
+}
+
+
+/*label[for=email]*/
+div.ui-datepicker{
+    font-size: 0.7em;
+}
+
+img.ui-datepicker-trigger {
+    height: 21px;
+    position: relative;
+    top: 5px;
+    right: -2px;
+    margin-top: -10px; /* to remove margins from the top of calendar image*/
+}
+
+
+/**FORM ELEMENTS TEST**/
+section#applicant-info ul, #applicant-eval-results ul { font-size:0; }
+section#applicant-info ul li, #applicant-eval-results ul li { font-size:16px;}
+
+section#applicant-info li,
+section#applicant-eval-results li {
+    display: inline-block;
+    width: 100%;
+}
+
+#applicant-info li label:not(.radio),
+#applicant-eval-results li label {
+    display: block;/** change to block to move fields to next line **/
+    font-size: 0.9em;
+    width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 8px;
+}
+
+#applicant-info li input:not(.datepick),
+#applicant-eval-results li input:not(.datepick) {
+    display: block;
+    width: 90%;
+}
+input.datepick {
+    display: inline-block;
+    width: 70%;
+}
+#applicant-info li input[type="radio"] {
+    display: inline;
+    width: auto;
+    vertical-align: middle;
+}
+#applicant-info label[for="male"],
+#applicant-info label[for="female"] {
+    font-size: 0.8em;
+}
+#applicant-info li input[type="radio"]#female {
+    margin-left: 30px;
+}
+
+#applicant-info li label[for="emp_history"],
+#applicant-info li label[for="trainings"],
+#applicant-info li label[for="upload-files"] {
+    width: 100%;
+    font-size: 0.9em;
+}
+
+#applicant-eval-results select {
+    display: block;
+    width: 100%;
+    padding: 2px;
+    font-size: 0.75em;
+}
+#applicant-info textarea,
+#applicant-eval-results textarea {
+    display: block;
+    width: 100%;
+    font-size: 0.7em;
+    height: 120px;
+}
+
+section##applicant-info li:last-child input#upload-files {
+    height: 120px;
+}
+    
+
+#applicant-info li input[type="file"]{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(240,240,240,0.5);
+}
+section#applicant-info, 
+section#applicant-eval-results {
+    padding: 10px 15%;
+}
+section#applicant-info li,
+section#applicant-eval-results li {
+    /*border: 1px solid black;*/
+}
+
+
+
+/***SEARCH PART ****/
+
+#applicant-search table {
+    margin-top: 30px;
+    font-size: 0.55em;
+}
+
+
+
+h3 {
+    font-weight: bold;
+    font-size: 0.8em;
+    margin-top: 10px;
+}
+
+#applicant-search select {
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+    padding: 2px;
+    font-size: 0.9em;
+}
+
+
+/**START - search box **/
+/** from: http://webdesignerwall.com/tutorials/expandable-mobile-search-form **/
+
+input[type=search] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    font-family: inherit;
+    font-size: 100%;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+    display: none;
+}
+input[type="search"] {
+    /*display: inline-block;*/
+    /*margin-top: 5px;*/
+    
+    background: #ededed url('../img/search-icon.png') no-repeat 2px 2px;
+    border: solid 1px #ccc;
+    padding: 9px 10px 9px 32px;
+    width: 55px;
+    /*float: left;*/
+    
+    -webkit-border-radius: 10em;
+    -moz-border-radius: 10em;
+    border-radius: 10em;
+    
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+    
+    /*margin-left: 2%;*/
+    font-size: 0.9em;
+    
+}
+input[type="search"]:focus {
+    width: 50%;
+    
+    background-color: #fff;
+    border-color: #6dcff6;
+    
+    -webkit-box-shadow: 0 0 5px rgba(109,207,246,0.5);
+    -moz-box-shadow: 0 0 5px rgba(109,207,246,0.5);
+    box-shadow: 0 0 5px rgba(109,207,246,0.5);
+}
+
+/**START - search box **/
+div#applicant-search form {
+    overflow: auto; /** to fix the collapsing margins due to floated elements **/
+    /** http://stackoverflow.com/questions/218760/how-do-you-keep-parents-of-floated-elements-from-collapsing**/
+}
+
+div#applicant-search ul { font-size:0; }
+div#applicant-search ul li { font-size:16px;}
+
+div#applicant-search li {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+}
+#add-new-applicant {
+    display: block;
+    text-align: right;
+}
+#applicant-search ul {
+    padding: 10px 5%;
+}
+#applicant-search li:first-child select {
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+    max-width: 300px;
+}
+#applicant-search li:nth-child(2) {
+    width: 80%;
+}
+#applicant-search li:last-child {
+    width: 20%;
+}
+a#add-new-applicant span {
+    display: none;   
+}
+a#add-new-applicant img {
+    height: 40px;
+}
+
+/*#applicant-search ul li {
+    border: 1px solid black;
+}*/
+
+div#new-applicant {
+    display: none;
+}

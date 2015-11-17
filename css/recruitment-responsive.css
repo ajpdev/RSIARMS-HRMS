@@ -1,0 +1,455 @@
+/*******************************
+ MEDIA QUERIES
+********************************/
+
+/* iphone screen portrait and landscape*/
+@media (min-width: 292px) and (max-width: 479px) {
+    #main-content-nav ul {
+       display: none;
+    }
+    
+    #main-nav {
+        display: none;
+    }
+
+    
+    /** START - table layout **/
+    #applicant-search table {
+        border: 0;
+    }
+
+    #applicant-search table thead {
+        display: none;
+    }
+
+    #applicant-search table tr {
+        border: 1px solid #ccc; 
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    #applicant-search table tr:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+  
+    #applicant-search table tr:before {
+        display: block;
+        border-bottom: 2px solid #ddd;-moz-binding: 
+    }
+
+    #applicant-search table td {
+        box-sizing: border-box;
+        display: block;
+        float: left;
+        clear: left;
+        width: 100%;
+        text-align: right;
+        font-size: 1.2em;
+        border-bottom: 1px dotted #ccc;
+    }
+
+    #applicant-search table td:last-child {
+        border-bottom: 0;
+    }
+
+    #applicant-search table td:before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    /** END - table layout **/
+
+}
+
+@media (min-width: 480px) {
+    /*** search section *****/
+    input[type="search"],input[type="search"]:focus {
+        width: 170px;
+    }
+    
+    #applicant-search li:first-child select {
+        display: block;
+        margin: 10px 0;
+        width: 205px;
+    }
+    #applicant-search ul li {
+        /*border: 1px solid black;*/
+    }
+    /**** ************/
+    /**** form elements ****/
+
+    section#applicant-info li,
+    section#applicant-eval-results li {
+        width: 50%;
+    }
+    
+    section#applicant-info li:nth-child(11),
+    section#applicant-info li:nth-child(22),
+    section#applicant-info li:nth-child(23),
+    section#applicant-info li:last-child,
+    section#applicant-eval-results li:last-child {
+        width: 100%;
+    }
+    section#applicant-info, 
+    section#applicant-eval-results {
+        padding: 10px 5%;
+    }
+    /**********/
+    
+    
+    #main-nav {
+        display: block !important; /** !important solves the issue when slidetoggling the menu via jQuery where it will remain hidder (display:none)**/
+        /**https://css-tricks.com/forums/topic/issue-with-jquery-slidetoggle-display-none/**/
+    }
+    /*hides the select element when window is > 568px*/
+    select#select-main-content-nav {
+       display: none;
+    }
+    
+    div.mobile-nav {
+        display: none;
+    }
+    
+    a#logout {
+        display: none;
+    }
+    
+    
+    /******************************
+     * MAIN CONTENT
+     ******************************/
+    /*add shadow effect to main contents*/
+    #main-content-wrapper {
+        max-width: 1300px; /* text will be centered if 940px is exceeded    */
+        margin: 0 auto;
+        padding: 20px 5%;
+    }
+
+    #main-contents {
+        min-height: 500px;
+        overflow: auto;
+
+        /** Add shadow effect **/
+        /*used http://www.cssmatic.com/box-shadow to generate shadow effect*/
+        -webkit-box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.38); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+        -moz-box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.38); /* Firefox 3.5 - 3.6 */
+        box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.38); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+    }
+    
+    div .desktop-header {
+        display: block;
+    }
+    
+    /*******************************
+    HEADING (above main navigation)
+    ********************************/
+    a.desktop-header {        
+        max-width: 400px;
+        margin: 0 auto;
+        width: 98%;
+    }
+    .logolink {
+        margin: 0 auto;
+        width: 98%;
+        /*padding: 0 5px;*/
+    }
+    
+    .logolink  p {
+        /*background-color: red;*/
+        width: 100%;
+        text-align: right;
+        font-size: 0.75em;
+        font-weight: normal;
+        margin-right: 20px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    
+    /***************************
+    * SUB NAVIGATION
+    ***************************/
+    
+    #main-content-nav {
+        margin-top: 20px;
+        /*text-align: center;* - aligns <li> to the left*/
+    }
+    
+    #main-content-nav li {
+       /*background-color: #fff;*/
+       background-color: rgb(8,157,227);
+       display: inline-block;
+        height: 30px;
+        line-height: 20px;
+        /*border: 1px solid rgb(8,157,227);*/
+        border-bottom: none;
+    }
+    
+    #main-content-nav li:last-child {
+       border-top-right-radius: 20px;
+       border-left: 1px solid rgba(255,255,255,0.8);
+    }
+    #main-content-nav li:first-child {
+       border-top-left-radius: 20px;
+       border-right: 1px solid rgba(255,255,255,0.8);
+    }
+    #main-content-nav li:nth-child(2){
+        border-right: 1px solid rgba(255,255,255,0.8);
+    }
+    #main-content-nav a {
+       /*border: 1px solid blue;*/
+        color: rgb(8,157,227);
+        color: #fff;
+        text-decoration: none;
+        font-size: 0.6em;
+        width: 100%;
+        display: block; /** automatically takes up 100% space of the parent **/
+        height: 100%;
+        padding: 5px 8px;
+        /*border: 1px solid rgb(8,157,227);*/
+       
+    }
+    .selectedTab {
+        border-bottom: none;
+    }
+    
+    #main-content-nav .selectedTab {/**TODO: palitan mo to **/        
+        background-color: rgb(49,62,159);
+        color: yellow;
+        /*border: 1px solid rgb(8,157,227);*/
+        border-bottom: none;
+    }
+
+  
+}
+
+@media screen and (min-width: 768px) {
+    /*** search section *****/
+    
+    #applicant-search li:nth-child(2) {
+        width: 50%;
+    }
+    #applicant-search li:last-child {
+        width: 50%;
+    }
+    a#add-new-applicant span {
+        display: inline;  
+        position: relative;
+        top: -10px;
+        left: 2px;  
+    }
+    /**** ************/
+    /**** form elements ****/
+    section#applicant-info li,
+    section#applicant-eval-results li {
+        width: 33.33%;
+    }
+    
+    #applicant-info textarea,
+    #applicant-eval-results textarea {
+        width: 80%;
+        font-size: 0.9em;
+        height: 120px;
+    }
+    
+    #applicant-info li input[type="file"]{
+        width: 80%;
+    }
+    /**********/
+
+    #applicant-search table {
+        font-size: 0.75em;
+    }
+    a.desktop-header {
+        margin: 0 0 -20px;
+    }
+    
+    nav ul li {
+        width: 20%;
+                
+    }    
+    #main-content-nav a {
+        font-size: 0.8em;
+        padding: 5px 20px;
+        font-weight: bold;
+    }
+    
+    nav ul li:nth-child(even){
+        border-right: 1px solid rgba(255,255,255,0.8); /**change opacity to 0.5*/
+        border-bottom: 1px solid rgba(255,255,255,0.8);/**change opacity to 0.5*/
+    }
+    nav ul li:nth-child(odd){
+        border-left: 1px solid rgba(255,255,255,0.8);/**change opacity to 0.5*/
+        border-right: 1px solid rgba(255,255,255,0.8);/**change opacity to 0.5*/
+        border-bottom: 1px solid rgba(255,255,255,0.8);/**change opacity to 0.5*/
+    }
+    
+    nav ul li:nth-child(even) a{
+        border-right: 1px solid rgba(0,0,0,0.3);
+    }
+    nav ul li:nth-child(odd) a{
+        border-left: 1px solid rgba(0,0,0,0.3);
+    }
+    
+    nav ul li:first-child,
+    nav ul li:nth-child(6) {
+        border-left: none;
+    }
+    
+    nav ul li:first-child a,
+    nav ul li:nth-child(6) a{
+        border-left: none;
+    }
+    
+    nav ul li:nth-child(5),
+    nav ul li:last-child {
+        border-right: none;
+    }
+    
+    nav ul li:nth-child(5) a,
+    nav ul li:last-child a {
+        border-right: none;
+    }
+    nav ul li:first-child,
+    nav ul li:nth-child(2),
+    nav ul li:nth-child(3),
+    nav ul li:nth-child(4),
+    nav ul li:nth-child(5) {
+        border-top: none;
+    }
+}  
+
+
+@media screen and (min-width: 1024px) {
+    /*** search section *****/
+    div#applicant-search ul li:first-child {
+        width: 40%;
+    }
+    div#applicant-search ul li:first-child label {
+        display: inline-block;
+        width: 35%;
+        font-size: 0.9em;
+    } 
+    div#applicant-search ul li:first-child select {
+        display: inline-block;
+        width: 60%;
+    } 
+    div#applicant-search ul li:nth-child(2) {
+        width: 35%;
+    }
+    div#applicant-search ul li:last-child {
+        width: 25%;
+    }
+    /**** ************/    
+    /**START FORM ELEMENTS TEST**/
+    section#applicant-eval-results li {
+        width: 100%;
+    }
+    section#applicant-info {
+        width: 70%;
+        float: left;
+    }
+    section#applicant-eval-results {
+        width: 28%;
+        float: right;
+    }
+    #sections {
+        overflow: auto;
+        padding: 10px;
+    }
+    div#buttons{
+        /*border:1px solid black;*/
+        /*margin-top: 40px;*/
+        /*clear: both;*/
+    }
+    section#applicant-info, 
+    section#applicant-eval-results {
+        padding: 10px 3%;
+    }
+    #applicant-eval-results textarea {
+        width: 100%;
+    } 
+    /**END FORM ELEMENTS TEST**/
+    .logolink {
+        width: 95%;
+    }
+        
+    nav {
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+    nav ul li {
+        width: 9.5%;
+    }
+    
+    #cfeedeval {
+        width: 14.5%;
+    }
+    
+    nav ul li:nth-child(6) {
+        border-left: 1px solid rgba(255,255,255,0.8);
+    }
+    
+    nav ul li:nth-child(6) a{
+        border-left: 1px solid rgba(0,0,0,0.3);
+    }
+    
+    nav ul li:nth-child(5) {
+        border-right: 1px solid rgba(255,255,255,0.8);
+    }
+    
+    nav ul li:nth-child(5) a {
+        border-right: 1px solid rgba(0,0,0,0.3);
+    }
+    
+    nav ul li:nth-child(6),
+    nav ul li:nth-child(7),
+    nav ul li:nth-child(8),
+    nav ul li:nth-child(9),
+    nav ul li:last-child {
+        border-top: none;
+    }
+    
+    .selectedHeader.badge[data-badges]:after {
+       top: -10px;
+       right: -5px;
+    }
+
+}  
+
+@media screen and (min-width: 1224px) {
+    /**search applicant **/
+    div#applicant-search ul li:first-child {
+        width: 35%;
+    }
+    div#applicant-search ul li:nth-child(2) {
+        width: 40%;
+    }
+    div#applicant-search ul li:first-child label {
+        display: inline-block;
+        width: 35%;
+        font-size: 0.9em;
+    } 
+    div#applicant-search ul li:first-child select {
+        display: inline-block;
+        width: 60%;
+    }
+    /******/ 
+    .logolink {
+        width: 90%;
+    }
+    
+    nav {
+        width: 90%;
+    }
+    #main-content-nav a {
+        font-size: 0.9em;
+    }
+    .selectedHeader.badge[data-badges]:after {
+       top: -10px;
+       right: 3px;
+    }    
+}
